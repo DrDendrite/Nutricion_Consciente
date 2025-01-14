@@ -1,0 +1,77 @@
+.about{
+    max-width: 100%;
+    height: 100vh;
+    background: rgba(229, 209, 202, 1);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me{
+    width: 1500px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-me_title{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    color: #ffffff;
+    font-size: 50px;
+    font-family: Coconat;
+    top: 10%;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 70px;
+}
+
+.about-me_pic{
+    width: 400px;
+    height: 600px;
+    border-radius: 2%;
+    box-shadow: 5px 9px 9px 1px rgba(0, 0, 0, 0.4);
+}
+
+.about-me_box{
+    width: 800px;
+    background-color: rgba(238, 228, 219, 1);
+    height: 600px;
+    border-radius: 2%;
+    margin-left:300px;
+}
+
+.about-me_info{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    text-align:center;
+    font-size: 20px;    
+    font-weight: 550;
+    line-height: 180%;
+    color: rgb(167, 119, 107, 1);
+    font-family: Roboto-Regular;
+}
+.button{
+    position: absolute;
+    background-color: #E99E8C;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 296px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 550;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 5px 9px 9px 1px rgba(0, 0, 0, 0.4);
+    border-color: hsl(29, 86%, 75%);
+    border-width: 5px;
+}

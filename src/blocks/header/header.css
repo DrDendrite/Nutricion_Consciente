@@ -1,0 +1,64 @@
+.body{
+    background-color: rgba(196, 196, 196, 1);
+    font-family: Arial, sans-serif;
+    margin-top: 0px;
+    padding: 0;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: rgba(206, 156, 145, 1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 1920px;
+    position: fixed;
+    z-index: 1000;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+.nav-list_start{
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: Coconat-Regular;
+    font-weight: 550;
+}
+
+.nav-list_knowme{
+    margin-right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: Coconat-Regular;
+}
+
+.nav-list_challenges{
+    margin-right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: Coconat-Regular;
+}
+
+.nav-list_questions{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: Coconat-Regular;
+}

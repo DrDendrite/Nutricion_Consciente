@@ -1,0 +1,44 @@
+.inperson{
+    width: 30%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff72;
+    align-items: center;
+    margin-bottom: 190px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inperson-title{
+    color: #b56652;
+    font-size:45px;
+    text-align: center;
+    font-family: Arapey-Italic;
+}
+
+.inperson-address{
+    color: #000000;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 50px;
+    width: 650px;
+    font-family: Arapey-Regular;
+    line-height: 170%;
+}
+
+.button-schedule_inperson{
+    background-color: #E99E8C;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 550;
+    color: white;
+    box-shadow: 5px 9px 9px 1px rgba(0, 0, 0, 0.4);
+    border-width: 2px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}

@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Coconat-Regular';
+    src: url(../fonts/Coconat-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Arapey-Regular';
+    src: url(../fonts/Arapey-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Arapey-Italic';
+    src: url(../fonts/Arapey-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'bakery';
+    src: url(../fonts/bakery.otf);
+}
+
+@font-face {
+    font-family: 'bookmania-bold';
+    src: url(../fonts/Fontspring-DEMO-bookmania-bold.otf);
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Hand-Semibold';
+    src: url(../fonts/EduAUVICWANTHand-SemiBold.ttf);
+}
