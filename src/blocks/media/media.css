@@ -1,0 +1,1247 @@
+/* ==========================================================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Mobile First Approach - Base styles are for mobile */
+
+/* ==========================================================================
+   SMALL MOBILE DEVICES (320px - 480px)
+   ========================================================================== */
+@media screen and (max-width: 480px) {
+  /* Body and General Layout */
+  .body {
+    max-width: 100%;
+  }
+
+
+  /* Navigation */
+  .nav {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .nav-list_start,
+  .nav-list_knowme,
+  .nav-list_challenges,
+  .nav-list_questions {
+    font-size: 26px;
+    margin-right: 0;
+    margin-bottom: 5px;
+    color: rgb(0, 4, 4);
+  }
+
+  /* Hero Section */
+  .start {
+    height: 100vh;
+  }
+
+  .start-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .start-image_cover {
+    width: 100%;
+    opacity: 0.7;
+  }
+
+  .start-box {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  .start-title {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .start-image_logo {
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+  }
+
+  .start-image_isotype {
+    width: 60px;
+    height: 60px;
+    margin-top: 40px;
+  }
+
+  .start-title_box {
+    width: 95%;
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .start-title_list {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .start-title_text {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  /* About Section */
+  .about {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .about-me {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-me_title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    width: 95%;
+  }
+
+  .about-me_pic {
+    width: 280px;
+    height: 350px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+
+  .about-me_box {
+    width: 95%;
+    margin-left: 0;
+    padding: 20px;
+    height: auto;
+  }
+
+  .about-me_info {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px;
+  }
+ 
+  .button-schedule {
+    width: 60%;
+    display: flex;
+    font-size: 18px;
+    text-align: center;
+    background-color: #f59a83d0;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .button-schedule:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+  }
+
+  /* Icons Section */
+
+  .icons {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .icons-main {
+    width: 90%;
+  }
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1.3fr);
+    gap: 20px;
+    width: 90%;
+    margin: 0;
+  }
+
+  .icons-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .mb-2, .mb-4 {
+    width: 50%;
+    height: auto;
+    align-items: center;
+  }
+  .icons-grid_calendar{
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .icons-grid_messages {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 38px;
+  }
+  .icons-grid_pan {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 38px;
+  }
+
+  .icons-grid_healthy {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 58px;
+  }
+
+  .icons-description {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Program Section */
+  .program {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .program-info {
+    width: 95%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+  }
+  .program-title {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .program-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .program-grid {
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 270px;
+  }
+  .program-pic {
+    width: 90%;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+  .button-program_info {
+    width: 60%;
+    display: flex;
+    font-size: 18px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  /* Appointment Sections */
+  
+  .appointment {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .appointment-box {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .appointment-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: transparent;
+    margin-top: 10px
+  }
+ 
+  .appointment-list_image {
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-left: 0;
+    z-index: -1;
+    opacity: 0.4 ;
+  }
+
+  .appointment-list_box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    height: auto;
+    margin-top: 0;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+
+  .appointment-list_title{
+    font-size: 18px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .appointment-list{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+    padding: 5px;
+  }
+  
+  .appointment-list_steps_box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    margin-top: 30px;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 265px;
+  }
+
+  .appointment-list_title_steps {
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+
+  .appointment-list_steps {
+    font-size: 16px;
+    margin-left: 0;
+    width: 80%;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  .button-appointment {
+    width: 50%;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* In-Person Section */
+  .inperson {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inperson-inbox {
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inperson-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .inperson-address {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  /* Footer */
+  .footer {
+    width: 100%;
+    background-color: rgba(206, 156, 145, 1);
+    color: white;
+    padding: 20px 0;
+  }
+  .footer-copyright {
+    font-size: 14px;
+    margin-top: 5px;
+    width: 30%;
+  }
+
+  .footer-icons {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    margin-top: 2px;
+    width: 20%;
+    margin-left: 50px;
+    position: relative;
+  }
+  .footer-instagram_img{
+    width: 30px;
+    height: 30px;
+    margin-top: 3px;
+  }
+  .footer-whatsapp_img {
+    width: 35px;
+    height: 35px;
+
+    bottom: 5px;
+    right: 5px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 50px;
+  }
+  .footer-contact {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-contact:hover {
+    text-decoration: underline;
+  }
+  .footer-instagram {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-instagram:hover {
+    text-decoration: underline;
+  }
+  .footer-whatsapp {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-whatsapp:hover {
+    text-decoration: underline;
+  }
+ 
+}
+
+/* ==========================================================================
+   LARGE MOBILE DEVICES (481px - 767px)
+   ========================================================================== */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .body {
+    max-width: 100%;
+  }
+/* Navigation */
+  .nav {
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  .nav-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0px;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+ /* Hero Section */
+  .start {
+    width: 100%;
+    height: auto;
+}
+
+  .start-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .start-image_logo {
+    width: 250px;
+    height: 250px;
+  }
+  .start-image_isotype {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+  }
+
+  .start-image_cover {
+    width: 100%;
+    opacity: 0.7;
+  }
+  .start-box {
+    width: 90%;
+    height: auto;
+  }
+  .start-title {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+  .start-title_box {
+    width: 95%;
+    margin-top: 30px;
+    padding: 20px;
+    margin-bottom: 18px;
+  }
+  .start-title_list {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .start-title_text {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+  /* About Section */
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+  } 
+  .about-me_title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    width: 95%;
+  }
+  .about-me {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me_pic {
+    width: 350px;
+    height: 450px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  .about-me_box {
+    width: 95%;
+    margin-left: 0;
+    padding: 20px;
+    height: auto;
+  }
+  .about-me_info {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px;
+  }
+  .button-schedule {
+    width: 60%;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f59a83d0;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  
+
+  /* Services Section */
+  .icons {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .icons-main {
+    width: 90%;
+  }
+  .icons-title {
+    font-size: 32px;
+    text-align: center;
+  }
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 90%;
+    margin: 0;
+  }
+  .icons-grid_calendar {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+  .icons-grid_pan {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 38px;
+  }
+  .icons-grid_messages {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 38px;
+  }
+  .icons-grid_healthy {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 58px;
+  }
+  .icons-description {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Program Section */
+  .program {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .program-info {
+    width: 95%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .program-title {
+    font-size: 32px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .program-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .program-grid {
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 270px;
+  }
+  .program-pic {
+    width: 90%;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+  .button-program_info {
+    width: 60%;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  /* Appointment Section */
+  .appointment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .appointment-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    align-items: center;
+  }
+  .appointment-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: transparent;
+  }
+  .appointment-list_image {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-left: 0;
+    z-index: -1;
+    opacity: 0.4 ;
+  }
+  .appointment-list_box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    height: auto;
+    margin-top: 0;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+  .appointment-list_title{
+    font-size: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .appointment-list{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+    padding: 5px;
+  }
+  .appointment-list_steps_box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    margin-top: 10px;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: auto;
+  }
+  .appointment-list_title_steps {
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  .appointment-list_steps {
+    font-size: 18px;
+    margin-left: 0;
+    width: 80%;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .button-appointment {
+    width: 60%;
+    margin-top: -30px;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  /* In-Person Section */
+  .inperson {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inperson-box{
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inperson-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .inperson-address {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .button-schedule_inperson {
+    width: 60%;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f59a83d0;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  /* Footer */
+  .footer {
+    width: 100%;
+    background-color: rgba(206, 156, 145, 1);
+    color: white;
+    padding: 20px 0;
+  }
+  .footer-copyright {
+    font-size: 16px;
+    margin-top: 5px;
+    width: 40%;
+  }
+  .footer-icons {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    margin-top: 2px;
+    width: 25%;
+    margin-left: 50px;
+    position: relative;
+  }
+  .footer-instagram_img{
+    width: 35px;
+    height: 35px;
+    margin-top: 3px;
+  }
+  .footer-whatsapp_img {
+    width: 40px;
+    height: 40px;
+
+    bottom: 5px;
+    right: 5px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 50px;
+  }
+  .footer-contact {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-contact:hover {
+    text-decoration: underline;
+  }
+  .footer-instagram {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-instagram:hover {
+    text-decoration: underline;
+  }
+  .footer-whatsapp {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-whatsapp:hover {
+    text-decoration: underline;
+  }
+
+}
+
+/* ==========================================================================
+   TABLETS (768px - 1023px)
+   ========================================================================== */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+ .body {
+    max-width: 100%;
+  }
+/* Navigation */
+  .nav {
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  .nav-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0px;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+ /* Hero Section */
+  .start {
+    width: 100%;
+    height: auto;
+}
+
+  .start-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .start-image_logo {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .start-image_isotype {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+  }
+
+  .start-image_cover {
+    width: 100%;
+    opacity: 0.7;
+  }
+  
+  .start-box {
+    width: 90%;
+    height: auto;
+  }
+  
+  .start-title {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+  
+  .start-title_box {
+    width: 95%;
+    margin-top: 30px;
+    padding: 20px;
+    margin-bottom: 18px;
+   }
+  
+   .start-title_list {
+     font-size: 20px;
+     margin-top: 20px;
+   }
+  
+   .start-title_text {
+     font-size: 22px;
+     margin-top: 30px;
+   }
+  
+   /* About Section */
+   .about {
+     width: 100%;
+     height: auto;
+     padding: 40px 0;
+   } 
+   .about-me_title {
+     font-size: 32px;
+     margin-bottom: 30px;
+     width: 95%;
+   }
+   .about-me {
+     width: 95%;
+     height: auto;
+     flex-direction: column;
+     align-items: center;
+   }
+   .about-me_pic {
+     width: 350px;
+     height: 450px;
+     margin-bottom: 20px;
+     object-fit: cover;
+   }
+   .about-me_box {
+     width: 95%;
+     margin-left: auto;
+     margin-right: auto;
+   }
+   
+   /* Services Section */
+
+   .icons {
+     width: 100%;
+     padding: 40px 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: auto;
+   }
+   .icons-main {
+     width: 90%;
+   }
+   .icons-title {
+     font-size: 32px;
+     text-align: center;
+   }
+   .icons-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+     width: 90%;
+     margin: 0;
+   }
+   .icons-grid_calendar {
+     width: 100%;
+     height: auto;
+     margin-top: 0;
+   }
+   .mb-2 {
+     margin-bottom: 0.5rem;
+   }
+   .icons-description {
+     font-size: 14px;
+     color: #666;
+     text-align: center;
+   }
+   .icons-grid_messages {
+     width: 100%;
+     height: auto;
+     margin-top: 0;
+   }
+   .icons-grid_healthy {
+     width: 100%;
+     height: auto;
+     margin-top: 0;
+   }
+   .icons-grid_pan {
+     width: 100%;
+     height: auto;
+     margin-top: 0;
+   }
+}
+
+/* ==========================================================================
+   SMALL LAPTOPS (1024px - 1199px)
+   ========================================================================== */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .body {
+    max-width: 1200px;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .start-image_cover {
+    width: 100%;
+  }
+
+  .start-box {
+    width: 90%;
+  }
+
+  .about-me {
+    width: 90%;
+  }
+
+  .about-me_box {
+    margin-left: 200px;
+  }
+
+  .icons-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==========================================================================
+   DESKTOPS (1200px - 1439px)
+   ========================================================================== */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .body {
+    max-width: 1400px;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  .start-image_cover {
+    width: 100%;
+  }
+
+  .start-box {
+    width: 1200px;
+  }
+
+  .about-me {
+    width: 1200px;
+  }
+}
+
+/* ==========================================================================
+   LARGE DESKTOPS (1440px - 1919px)
+   ========================================================================== */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .body {
+    max-width: 1600px;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 1600px;
+  }
+
+  .start-image_cover {
+    width: 100%;
+  }
+
+  .start-box {
+    width: 1400px;
+  }
+
+  .about-me {
+    width: 1400px;
+  }
+}
+
+/* ==========================================================================
+   EXTRA LARGE SCREENS (1920px and up)
+   ========================================================================== */
+@media screen and (min-width: 1920px) {
+  .body {
+    max-width: 1920px;
+  }
+
+  .nav {
+    width: 1920px;
+  }
+
+  .start-image_cover {
+    width: 1920px;
+  }
+
+  /* Keep original desktop styles for extra large screens */
+}
+
+/* ==========================================================================
+   UTILITY CLASSES FOR RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Hide elements on mobile */
+@media screen and (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Hide elements on tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+/* Hide elements on desktop */
+@media screen and (min-width: 1024px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Show only on mobile */
+@media screen and (min-width: 768px) {
+  .show-mobile-only {
+    display: none !important;
+  }
+}
+
+/* Show only on tablet */
+.show-tablet-only {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .show-tablet-only {
+    display: block !important;
+  }
+}
+
+/* Show only on desktop */
+.show-desktop-only {
+  display: none !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .show-desktop-only {
+    display: block !important;
+  }
+}

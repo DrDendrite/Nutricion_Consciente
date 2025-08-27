@@ -15,17 +15,21 @@
     padding: 20px 0;
     background-color: rgba(206, 156, 145, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 1920px;
+    width: 100%;
     position: fixed;
     z-index: 1000;
     margin-left: auto;
     margin-right: auto;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .nav-bar{
     display: flex;
     align-items: center;
     max-width: 1200px;
     margin: auto;
+    width: 100%;
 }
 .nav-list{
     display: flex;
@@ -35,8 +39,18 @@
     margin-right: auto;
     margin-left: auto;
 }
+.nav-list li {
+    margin: 0 10px;
+}
+.nav-list a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.nav-list a:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
 .nav-list_start{
-    margin-right: 20px;
     color: white;
     font-size: 20px;
     font-family: Coconat-Regular;
@@ -44,14 +58,12 @@
 }
 
 .nav-list_knowme{
-    margin-right: 20px;
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-family: Coconat-Regular;
 }
 
 .nav-list_challenges{
-    margin-right: 20px;
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-family: Coconat-Regular;
