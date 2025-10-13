@@ -219,45 +219,97 @@
     margin-right: auto;
   }
 
-  /* Program Section */
+  /* Program Section - Social Media Posts */
   .program {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 0;
   }
 
   .program-info {
     width: 95%;
-    height: 80%;
     position: relative;
     display: flex;
-    margin-top: 50px;
+    margin-top: 20px;
     flex-direction: column;
+    text-align: center;
   }
   .program-title {
     font-size: 28px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b, #4ecdc4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(245, 154, 131, 0.3);
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .program-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b);
+    border-radius: 2px;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   .program-text {
     font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
-  .program-grid {
+  .program-grid.social-posts {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: auto;
-    margin-top: 270px;
+    gap: 20px;
+    width: 95%;
+    margin: 0 auto;
   }
-  .program-pic {
-    width: 90%;
-    object-fit: contain;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 1;
+  .social-post {
+    width: 100%;
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .social-post_image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .social-post_content {
+    padding: 20px;
+  }
+  .social-post_text {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .social-post_author {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f59a83;
   }
   .button-program_info {
     width: 60%;
@@ -660,44 +712,90 @@
     margin-right: auto;
   }
 
-  /* Program Section */
+  /* Program Section - Social Media Posts */
   .program {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 0;
   }
   .program-info {
     width: 95%;
-    height: 80%;
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 20px;
+    text-align: center;
   }
   .program-title {
     font-size: 32px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b, #4ecdc4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(245, 154, 131, 0.3);
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .program-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b);
+    border-radius: 2px;
   }
   .program-text {
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
-  .program-grid {
+  .program-grid.social-posts {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: auto;
-    margin-top: 270px;
+    gap: 20px;
+    width: 95%;
+    margin: 0 auto;
   }
-  .program-pic {
-    width: 90%;
-    object-fit: contain;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 1;
+  .social-post {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .social-post_image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  .social-post_content {
+    padding: 20px;
+  }
+  .social-post_text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .social-post_author {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f59a83;
   }
   .button-program_info {
     width: 60%;
@@ -924,15 +1022,18 @@
    TABLETS (768px - 1023px)
    ========================================================================== */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
- .body {
-    max-width: 100%;
-  }
-/* Navigation */
-  .nav {
-    width: 100%;
-    padding: 15px 20px;
+
+  /* Body and General Layout */
+  .body {
+    max-width: 1024px;
   }
 
+  /* Navigation */
+  .nav {
+    width: 100%;
+    padding: 20px 40px;
+    max-width: 1024px;
+  }
   .nav-bar {
     width: 100%;
     display: flex;
@@ -940,19 +1041,17 @@
     justify-content: space-between;
     margin-left: 0px;
   }
-
   .nav-list {
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
   }
 
- /* Hero Section */
+  /* Hero Section */
   .start {
     width: 100%;
     height: auto;
-}
-
+  }
   .start-container {
     width: 100%;
     position: relative;
@@ -960,164 +1059,923 @@
     flex-direction: column;
     align-items: center;
   }
-
   .start-image_logo {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
   }
-  
   .start-image_isotype {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     margin-top: 10px;
   }
-
   .start-image_cover {
     width: 100%;
     opacity: 0.7;
   }
-  
   .start-box {
     width: 90%;
     height: auto;
   }
-  
   .start-title {
-    font-size: 32px;
+    font-size: 36px;
     margin-top: 20px;
   }
-  
   .start-title_box {
     width: 95%;
     margin-top: 30px;
     padding: 20px;
     margin-bottom: 18px;
-   }
-  
-   .start-title_list {
-     font-size: 20px;
-     margin-top: 20px;
-   }
-  
-   .start-title_text {
-     font-size: 22px;
-     margin-top: 30px;
-   }
-  
-   /* About Section */
-   .about {
-     width: 100%;
-     height: auto;
-     padding: 40px 0;
-   } 
-   .about-me_title {
-     font-size: 32px;
-     margin-bottom: 30px;
-     width: 95%;
-   }
-   .about-me {
-     width: 95%;
-     height: auto;
-     flex-direction: column;
-     align-items: center;
-   }
-   .about-me_pic {
-     width: 350px;
-     height: 450px;
-     margin-bottom: 20px;
-     object-fit: cover;
-   }
-   .about-me_box {
-     width: 95%;
-     margin-left: auto;
-     margin-right: auto;
-   }
-   
-   /* Services Section */
+  }
+  .start-title_list {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .start-title_text {
+    font-size: 26px;
+    margin-top: 30px;
+  }
 
-   .icons {
-     width: 100%;
-     padding: 40px 0;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     height: auto;
-   }
-   .icons-main {
-     width: 90%;
-   }
-   .icons-title {
-     font-size: 32px;
-     text-align: center;
-   }
-   .icons-grid {
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     gap: 20px;
-     width: 90%;
-     margin: 0;
-   }
-   .icons-grid_calendar {
-     width: 100%;
-     height: auto;
-     margin-top: 0;
-   }
-   .mb-2 {
-     margin-bottom: 0.5rem;
-   }
-   .icons-description {
-     font-size: 14px;
-     color: #666;
-     text-align: center;
-   }
-   .icons-grid_messages {
-     width: 100%;
-     height: auto;
-     margin-top: 0;
-   }
-   .icons-grid_healthy {
-     width: 100%;
-     height: auto;
-     margin-top: 0;
-   }
-   .icons-grid_pan {
-     width: 100%;
-     height: auto;
-     margin-top: 0;
-   }
+  /* About Section */
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+  }
+  .about-me_title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    width: 95%;
+  }
+  .about-me {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me_pic {
+    width: 400px;
+    height: 500px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  .about-me_box {
+    width: 95%;
+    margin-left: 0;
+    padding: 20px;
+    height: auto;
+  }
+  .about-me_info {
+    font-size: 22px;
+    line-height: 1.6;
+    margin: 10px;
+  }
+  .button-schedule {
+    width: 60%;
+    display: flex;
+    font-size: 22px;
+    text-align: center;
+    background-color: #f59a83d0;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  /* Services Section */
+  .icons {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .icons-main {
+    width: 90%;
+  }
+  .icons-title {
+    font-size: 36px;
+    text-align: center;
+  }
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 90%;
+    margin: 0;
+  }
+  .icons-grid_calendar,
+  .icons-grid_pan,
+  .icons-grid_messages,
+  .icons-grid_healthy {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 38px;
+  }
+  .icons-description {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Program Section - Social Media Posts */
+  .program {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+  .program-info {
+    width: 95%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .program-title {
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b, #4ecdc4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(245, 154, 131, 0.3);
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .program-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b);
+    border-radius: 2px;
+  }
+  .program-text {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .program-grid.social-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .social-post {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .social-post_image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  .social-post_content {
+    padding: 20px;
+  }
+  .social-post_text {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .social-post_author {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f59a83;
+  }
+  .button-program_info {
+    width: 40%;
+    display: flex;
+    font-size: 22px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  /* Appointment Section */
+  .appointment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .appointment-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    align-items: center;
+  }
+  .appointment-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: transparent;
+  }
+  .appointment-list_image {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-left: 0;
+    z-index: -1;
+    opacity: 0.4 ;
+  }
+  .appointment-list_box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    height: auto;
+    margin-top: 0;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .appointment-list_title{
+    font-size: 24px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .appointment-list{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+    padding: 5px;
+  }
+  .appointment-list_steps_box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    margin-top: 10px;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: auto;
+  }
+  .appointment-list_title_steps {
+    font-size: 24px;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  .appointment-list_steps {
+    font-size: 22px;
+    margin-left: 0;
+    width: 80%;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .button-appointment {
+    width: 60%;
+    margin-top: -30px;
+    display: flex;
+    font-size: 22px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  /* In-Person Section */
+  .inperson {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inperson-box{
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inperson-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .inperson-address {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .button-schedule_inperson {
+    width: 60%;
+    display: flex;
+    font-size: 22px;
+    text-align: center;
+    background-color: #f59a83d0;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  /* Footer */
+  .footer {
+    width: 100%;
+    background-color: rgba(206, 156, 145, 1);
+    color: white;
+    padding: 20px 0;
+  }
+  .footer-copyright {
+    font-size: 20px;
+    margin-top: 5px;
+    width: 50%;
+  }
+  .footer-icons {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    margin-top: 2px;
+    width: 30%;
+    margin-left: 50px;
+    position: relative;
+  }
+  .footer-instagram_img{
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+  }
+  .footer-whatsapp_img {
+    width: 45px;
+    height: 45px;
+    bottom: 5px;
+    right: 5px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 50px;
+  }
+  .footer-contact {
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-contact:hover {
+    text-decoration: underline;
+  }
+  .footer-instagram {
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-instagram:hover {
+    text-decoration: underline;
+  }
+  .footer-whatsapp {
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+  }
+  .footer-whatsapp:hover {
+    text-decoration: underline;
+  }
+
 }
 
 /* ==========================================================================
    SMALL LAPTOPS (1024px - 1199px)
    ========================================================================== */
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
-  .body {
-    max-width: 1200px;
-  }
-
+  /* Navigation */
   .nav {
     width: 100%;
     max-width: 1200px;
+    padding: 30px 60px;
+  }
+  .nav-bar {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0px;
+  }
+  .nav-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    color: rgb(0, 0, 0);
   }
 
+  /* Hero Section */
+  .start {
+    width: 100%;
+    height: auto;
+  }
+  .start-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .start-image_logo {
+    width: 350px;
+    height: 265px;
+  }
+  .start-image_isotype {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+  }
   .start-image_cover {
     width: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+    height: auto;
   }
-
   .start-box {
     width: 90%;
+    margin-top: 0px;
+  }
+  .start-title {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  .start-title_box {
+    width: 95%;
+    margin-bottom: 18px;
+  }
+  .start-title_list {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+  .start-title_text {
+    font-size: 30px;
+    margin-top: 30px;
   }
 
+  /* About Section */
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+  }
+  .about-me_title {
+    font-size: 40px;
+    margin-bottom: 30px;
+    width: 95%;
+  }
   .about-me {
     width: 90%;
+    height: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
   }
-
+  .about-me_pic {
+    width: 450px;
+    height: 550px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
   .about-me_box {
-    margin-left: 200px;
+    width: 70%;
+    margin-left: 0px;
+    padding: 20px;
+    height: auto;
+  }
+  .about-me_info {
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 10px;
+  }
+  .button-schedule {
+    width: 60%;
+    display: flex;
+    font-size: 26px;
+    text-align: center;
+    background-color: #f59a83d0;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
   }
 
+  /* Services Section */
+  .icons {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .icons-main {
+    width: 90%;
+  }
+  .icons-title {
+    font-size: 40px;
+    text-align: center;
+  }
   .icons-grid {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    width: 90%;
+    margin: 0;
+  }
+  .icons-grid_calendar{
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 38px;
+  }
+  .icons-grid_pan {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 98px;
+  } 
+  .icons-grid_messages {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 60px;
+  }
+  .icons-grid_healthy {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 128px;
+  }
+  .icons-description {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Program Section - Social Media Posts */
+  .program {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+  }
+  .program-info {
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .program-title {
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b, #4ecdc4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(245, 154, 131, 0.3);
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .program-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b);
+    border-radius: 2px;
+  }
+  .program-text {
+    font-size: 26px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  .program-grid.social-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 90%;
+    margin-top: 120px;
+  }
+  .social-post {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .social-post:hover {
+    transform: translateY(-5px);
+  }
+  .social-post_image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+  .social-post_content {
+    padding: 25px;
+  }
+  .social-post_text {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  .social-post_author {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f59a83;
+  }
+  .button-program_info {
+    width: 30%;
+    display: flex;
+    font-size: 26px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 15px 30px;
+  }
+
+  /* Appointment Section */
+  .appointment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .appointment-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    align-items: center;
+  }
+  .appointment-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: transparent;
+  }
+  .appointment-list_image {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-left: 0;
+    z-index: -1;
+    opacity: 0.4 ;
+  }
+  .appointment-list_box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    height: auto;
+    margin-top: 0;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .appointment-list_title{
+    font-size: 28px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .appointment-list{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+    padding: 5px;
+  }
+  .appointment-list_steps_box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    margin-top: 10px;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: auto;
+  }
+  .appointment-list_title_steps {
+    font-size: 28px;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  .appointment-list_steps {
+    font-size: 18px;
+    margin-left: 0;
+    width: 80%;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .button-appointment {
+    width: 40%;
+    margin-top: -30px;
+    display: flex;
+    font-size: 26px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  /* In-Person Section */
+  .inperson {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inperson-box{
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inperson-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .inperson-address {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .button-schedule_inperson {
+    width: 40%;
+    display: flex;
+    font-size: 26px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    background-color: rgba(206, 156, 145, 1);
+    color: white;
+    padding: 20px 0;
+  }
+  .footer-copyright {
+    font-size: 14px;
+    margin-top: 20px;
+    width: 60%;
+    height: auto; 
+  }
+  .footer-icons {
+    display: flex;
+    width: 80%;
+    height: 50px;
+    flex-direction: row;
+    margin-top: 2px;
+    margin-left: 0px; 
+    position: relative;   
+  }
+  .footer-instagram_img{
+    width: 50px;
+    height: 50px;
+    margin-top: 3px;
+  }
+  .footer-whatsapp_img {
+    width: 55px;
+    height: 55px;
+    bottom: 5px;
+    right: 5px;
+  }
+  .footer-links {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-left: 30px; 
+    margin-right: 0;
+    gap: 20px;
+    width: 40%;
+  }
+  .footer-contact {
+    
+    text-decoration: none;
+    color: white;
+  }
+  .footer-contact:hover {
+    text-decoration: underline;
+  }
+  .footer-instagram {
+    
+    text-decoration: none;
+    color: white;
+  }
+  .footer-instagram:hover {
+    text-decoration: underline;
+  }
+  .footer-whatsapp {
+    
+    text-decoration: none;
+    color: white;
+  }
+  .footer-whatsapp:hover {
+    text-decoration: underline;
   }
 }
 
@@ -1125,51 +1983,962 @@
    DESKTOPS (1200px - 1439px)
    ========================================================================== */
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
+  /* Body and General Layout */
   .body {
     max-width: 1400px;
   }
 
+  /* Navigation */
   .nav {
     width: 100%;
     max-width: 1400px;
   }
+  .nav-bar {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    color: rgb(0, 0, 0);
+  }
 
+
+  /* Hero Section */
+  .start {
+    width: 100%;
+    height: auto;
+  }
+  .start-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .start-image_logo {
+    width: 400px;
+    height: 300px;
+  }
+  .start-image_isotype {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+  }
   .start-image_cover {
     width: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+    height: auto;
   }
-
   .start-box {
     width: 1200px;
+    margin-top: 0px;
+  }
+  .start-title {
+    font-size: 44px;
+    margin-top: 20px;
+  }
+  .start-title_box {
+    width: 95%;
+    margin-bottom: 18px;
+  }
+  .start-title_list {
+    font-size: 30px;
+    margin-top: 20px;
+  } 
+  .start-title_text {
+    font-size: 32px;
+    margin-top: 30px;
   }
 
+  /* About Section */
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+  }
+  .about-me_title {
+    font-size: 44px;
+    margin-bottom: 30px;
+    width: 95%;
+  }
   .about-me {
     width: 1200px;
+    height: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
   }
+  .about-me_pic {
+    width: 500px;
+    height: 600px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  .about-me_box {
+    width: 60%;
+    margin-left: 0px;
+    padding: 20px;
+    height: auto;
+  }
+  .about-me_info {
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 10px;
+  } 
+  .button-schedule {
+    width: 60%;
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    background-color: #f59a83d0;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 15px 30px;
+  }
+  /* Services Section */
+  .icons {
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .icons-main {
+    width: 80%;
+  }
+  .icons-title {
+    font-size: 44px;
+    text-align: center;
+  }
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    width: 80%;
+    margin: 0;
+  }
+  .icons-grid_calendar {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 38px;
+  }
+  .icons-grid_pan {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 138px;
+  }
+  .icons-grid_messages {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 90px;
+  }
+  .icons-grid_healthy {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 118px;
+  }
+  .icons-description {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Program Section - Social Media Posts */
+  .program {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .program-info {
+    width: 80%;
+    height: 75%;
+    margin-top: 70px;
+  }
+
+  .program-title {
+    font-size: 44px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b, #4ecdc4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(245, 154, 131, 0.3);
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .program-text {
+    font-size: 30px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+  }
+
+  .program-grid.social-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    width: 80%;
+    margin-top: 240px;
+    margin-bottom: 50px;
+    height: 50%;
+  }
+
+  .social-post {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .social-post:hover {
+    transform: translateY(-8px);
+  }
+
+  .social-post_image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  .social-post_content {
+    padding: 30px;
+  }
+
+  .social-post_text {
+    font-size: 28px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .social-post_author {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f59a83;
+  }
+
+  .button-program_info {
+    width: 25%;
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 20px 40px;
+  }
+
+  /* Appointment Section */
+  .appointment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .appointment-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    align-items: center;
+  }
+  .appointment-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: transparent;
+  }
+  .appointment-list_image {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-left: 0;
+    z-index: -1;
+    opacity: 0.4 ;
+  }
+  .appointment-list_box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    height: auto;
+    margin-top: 0;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .appointment-list_title{
+    font-size: 32px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .appointment-list{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+    padding: 5px;
+  }
+  .appointment-list_steps_box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 90%;
+    margin-top: 10px;
+    background-color: aliceblue;
+    opacity: 0.7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: auto;
+  }
+  .appointment-list_title_steps {
+    font-size: 32px;
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  .appointment-list_steps {
+    font-size: 20px;
+    margin-left: 0;
+    width: 80%;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .button-appointment {
+    width: 30%;
+    margin-top: -30px;
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  /* In-Person Section */
+  .inperson {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inperson-box{
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .inperson-title {
+    font-size: 44px;
+    margin-bottom: 20px;
+    text-align: center;
+  } 
+  .inperson-address {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }   
+  .button-schedule_inperson {
+    width: 30%;
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    background-color: #f59a83;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    background-color: rgba(206, 156, 145, 1);
+    color: white;
+    padding: 20px 0;
+  }
+  .footer-copyright {
+    font-size: 16px;
+    margin-top: 20px;
+    width: 60%;
+    height: auto; 
+  }
+  .footer-icons {
+    display: flex;
+    width: 80%;
+    height: 50px;
+    flex-direction: row;
+    margin-top: 2px;
+    margin-left: 0px; 
+    position: relative;   
+  }
+  .footer-instagram_img{
+    width: 60px;
+    height: 60px;
+    margin-top: 3px;
+  }
+  .footer-whatsapp_img {
+    width: 65px;
+    height: 65px;
+    bottom: 5px;
+    right: 5px;
+  }
+  .footer-links {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-left: 30px; 
+    margin-right: 0;
+    gap: 30px;
+    width: 40%;
+  }
+  .footer-contact {
+    
+    text-decoration: none;
+    color: white;
+  }
+  .footer-contact:hover {
+    text-decoration: underline;
+  }
+  .footer-instagram {
+    
+    text-decoration: none;
+    color: white;
+  } 
+  .footer-instagram:hover {
+    text-decoration: underline;
+  }
+  .footer-whatsapp {
+    
+    text-decoration: none;
+    color: white;
+  } 
+  .footer-whatsapp:hover {
+    text-decoration: underline;
+  }
+
+
 }
 
 /* ==========================================================================
    LARGE DESKTOPS (1440px - 1919px)
    ========================================================================== */
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
+  /* Body and General Layout */
   .body {
-    max-width: 1600px;
+    max-width: 1800px;
   }
-
+  /* Navigation */
   .nav {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1800px;
   }
-
+  .nav-bar {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    color: rgb(0, 0, 0);
+  }
+  /* Hero Section */
+  .start {
+    width: 100%;
+    height: auto;
+  }
+  .start-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .start-image_logo {
+    width: 450px;
+    height: 340px;
+  }
+  .start-image_isotype {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+  }
   .start-image_cover {
     width: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+    height: auto;
   }
-
   .start-box {
     width: 1400px;
+    margin-top: 0px;
   }
-
+  .start-title {
+    font-size: 48px;
+    margin-top: 20px;
+  }
+  .start-title_box {
+    width: 95%;
+    margin-bottom: 18px;
+  }
+  .start-title_list {
+    font-size: 34px;
+    margin-top: 20px;
+  }
+  .start-title_text {
+    font-size: 36px;
+    margin-top: 30px;
+  }
+  /* About Section */
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 80px 0;
+  }
+  .about-me_title {
+    font-size: 48px;
+    margin-bottom: 30px;
+    width: 95%;
+  }
   .about-me {
     width: 1400px;
+    height: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+  }
+  .about-me_pic {
+    width: 550px;
+    height: 650px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  .about-me_box {
+    width: 50%;
+    margin-left: 0px;
+    padding: 20px;
+    height: auto;
+  }
+  .about-me_info {
+    font-size: 28px;
+    line-height: 1.25;
+    margin: 10px;
+  }
+  .button-schedule {
+    width: 60%;
+    display: flex;
+    font-size: 34px;
+    text-align: center;
+    background-color: #f59a83d0;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 20px 40px;
+  }
+  /* Services Section */
+  .icons {
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .icons-main {
+    width: 70%;
+  } 
+  .icons-title {
+    font-size: 48px;
+    text-align: center;
+  }
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    width: 70%;
+    margin: 0;
+  }
+  .icons-grid_calendar {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 38px;
+  }
+  .icons-grid_pan {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 138px;
+  }
+  .icons-grid_messages {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 90px;
+  }
+  .icons-grid_healthy {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 118px;
+  }
+  .icons-description {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Program Section - Social Media Posts */
+  .program {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .program-info {
+    width: 70%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .program-title {
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b, #4ecdc4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(245, 154, 131, 0.3);
+    letter-spacing: 1px;
+  }
+  
+  .program-text {
+    font-size: 34px;
+    line-height: 1.7;
+    margin-bottom: 60px;
+  }
+
+  .program-grid.social-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    width: 70%;
+    margin-top: 150px;
+  }
+
+  .social-post {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .social-post:hover {
+    transform: translateY(-10px);
+  }
+
+  .social-post_image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .social-post_content {
+    padding: 35px;
+  }
+
+  .social-post_text {
+    font-size: 32px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .social-post_author {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f59a83;
+  }
+/*online appointment section*/
+.appointment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.appointment-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  align-items: center;
+}
+.appointment-title {
+  font-size: 44px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: transparent;
+}
+.appointment-list_image {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-left: 0;
+  z-index: -1;
+  opacity: 0.4 ;
+}
+.appointment-list_box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 90%;
+  height: auto;
+  margin-top: 0;
+  background-color: aliceblue;
+  opacity: 0.7;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.appointment-list_title{
+  font-size: 36px;
+  margin-bottom: 40px;
+  width: 100%;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.appointment-list{
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 70%;
+  padding: 5px;
+}
+.appointment-list_steps_box{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 90%;
+  margin-top: 10px;
+  background-color: aliceblue;
+  opacity: 0.7;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+.appointment-list_title_steps {
+  font-size: 36px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.appointment-list_steps {
+  font-size: 22px;
+  margin-left: 0;
+  width: 80%;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.button-appointment {
+  width: 25%;
+  margin-top: -30px;
+  display: flex;
+  font-size: 34px;
+  text-align: center;
+  background-color: #f59a83;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+} 
+/* In-Person Section */
+.inperson {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inperson-box{
+  width: 90%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inperson-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.inperson-address {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+.button-schedule_inperson {
+  width: 25%;
+  display: flex;
+  font-size: 34px;
+  text-align: center;
+  background-color: #f59a83;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    background-color: rgba(206, 156, 145, 1);
+    color: white;
+    padding: 20px 0;
+  }
+  .footer-copyright {
+    font-size: 18px;
+    margin-top: 20px;
+    width: 60%;
+    height: auto; 
+  }
+  .footer-icons {
+    display: flex;
+    width: 80%;
+    height: 50px;
+    flex-direction: row;
+    margin-top: 2px;
+    margin-left: 0px; 
+    position: relative;   
+  }
+  .footer-instagram_img{
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+    margin-left: 80px;
+  }
+  .footer-whatsapp_img {
+    width: 40px;
+    height: 40px;
+    bottom: 5px;
+    right: 5px;
+  }
+  .footer-links {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-left: 50px; 
+    margin-right: 0;
+    gap: 40px;
+    width: 40%;
+  }
+  .footer-contact {
+    
+    text-decoration: none;
+    color: white;
+  }
+  .footer-contact:hover {
+    text-decoration: underline;
+  }
+  .footer-instagram {
+    text-decoration: none;
+    color: white;
+  } 
+  .footer-instagram:hover {
+    text-decoration: underline;
+  }
+  .footer-whatsapp {
+    
+    text-decoration: none;
+    color: white;
+  } 
+  .footer-whatsapp:hover {
+    text-decoration: underline;
   }
 }
 
@@ -1177,20 +2946,483 @@
    EXTRA LARGE SCREENS (1920px and up)
    ========================================================================== */
 @media screen and (min-width: 1920px) {
+  /* Body and General Layout */
   .body {
     max-width: 1920px;
   }
 
+  /* Navigation */
   .nav {
-    width: 1920px;
+    width: 100%;
+    max-width: 1920px;
+  }
+  .nav-bar {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    color: rgb(0, 0, 0);
   }
 
+
+  /* Hero Section */
+  .start {
+    width: 100%;
+    height: auto;
+  }
+  .start-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .start-image_logo {
+    width: 500px;
+    height: 380px;
+  }
+  .start-image_isotype {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+  }
   .start-image_cover {
-    width: 1920px;
+    width: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+    height: 100%;
+  }
+  .start-box {
+    width: 1600px;
+    margin-top: -120px;
+  }
+  .start-title {
+    font-size: 52px;
+    margin-top: 0px;
+  }
+  .start-title_box {
+    width: 95%;
+    margin-bottom: 18px;
+    margin-top: 0;
+  }
+  .start-title_list {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  .start-title_text {
+    font-size: 38px;
+    margin-top: 30px;
   }
 
-  /* Keep original desktop styles for extra large screens */
+
+  /* About Section */
+  .about {
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+  }
+  .about-me_title {
+    font-size: 52px;
+    margin-bottom: 30px;
+    width: 95%;
+  }
+  .about-me {
+    width: 1600px;
+    height: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 70px;
+  }
+  .about-me_pic {
+    width: 600px;
+    height: 700px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  .about-me_box {
+    width: 45%;
+    margin-left: 0px;
+    padding: 20px;
+    height: auto;
+  }
+  .about-me_info {
+    font-size: 27px;
+    line-height: 1.25;
+    margin: 10px;
+  }
+  .button-schedule {
+    width: 60%;
+    display: flex;
+    font-size: 38px;
+    text-align: center;
+    background-color: #f59a83d0;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 25px 50px;
+  }
+  /* Services Section */
+  .icons {
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .icons-main {
+    width: 60%;
+  }
+  .icons-title {
+    font-size: 52px;
+    text-align: center;
+  }
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 70px;
+    width: 60%;
+    margin: 0;
+  }
+  .icons-grid_calendar {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 38px;
+  }
+  .icons-grid_pan {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 138px;
+  }
+  .icons-grid_messages {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 90px;
+  }
+  .icons-grid_healthy {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 118px;
+  }
+  .icons-description {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* Program Section - Social Media Posts */
+  .program {
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .program-info {
+    width: 60%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .program-title {
+    font-size: 52px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b, #4ecdc4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(245, 154, 131, 0.3);
+    letter-spacing: 1px;
+    position: relative;
+  }
+  .program-text {
+    font-size: 38px;
+    line-height: 1.7;
+    margin-bottom: 70px;
+  }
+
+  .program-grid.social-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+    width: 65%;
+    margin-top: 230px;
+  }
+
+  .social-post {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .social-post:hover {
+    transform: translateY(-12px);
+  }
+
+  .social-post_image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .social-post_content {
+    padding: 40px;
+  }
+
+  .social-post_text {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #333;
+  }
+
+  .social-post_author {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f59a83;
+  }
+
+/*online appointment section*/
+.appointment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
+.appointment-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  align-items: center;
+}
+.appointment-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: transparent;
+}
+.appointment-list_image {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-left: 0;
+  z-index: -1;
+  opacity: 0.4 ;
+}
+.appointment-list_box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 90%;
+  height: auto;
+  margin-top: 0;
+  background-color: aliceblue;
+  opacity: 0.7;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.appointment-list_title{
+  font-size: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.appointment-list{
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 70%;
+  padding: 5px;
+}
+.appointment-list_steps_box{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 90%;
+  margin-top: 10px;
+  background-color: aliceblue;
+  opacity: 0.7;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+.appointment-list_title_steps {
+  font-size: 40px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.appointment-list_steps {
+  font-size: 24px;
+  margin-left: 0;
+  width: 80%;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.button-appointment {
+  width: 20%;
+  margin-top: -30px;
+  display: flex;
+  font-size: 38px;
+  text-align: center;
+  background-color: #f59a83;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+/* In-Person Section */
+.inperson {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inperson-box{
+  width: 90%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inperson-title {
+  font-size: 52px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.inperson-address {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+.button-schedule_inperson {
+  width: 20%;
+  display: flex;
+  font-size: 38px;
+  text-align: center;
+  background-color: #f59a83;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    background-color: rgba(206, 156, 145, 1);
+    color: white;
+    padding: 20px 0;
+  }
+  .footer-copyright {
+    font-size: 20px;
+    margin-top: 20px;
+    width: 60%;
+    height: auto; 
+  }
+  .footer-icons {
+    display: flex;
+    width: 80%;
+    height: 50px;
+    flex-direction: row;
+    margin-top: 2px;
+    margin-left: 0px; 
+    position: relative;   
+  }
+  .footer-instagram_img{
+    width: 50px;
+    height: 50px;
+    margin-top: 3px;
+    margin-left: 100px;
+  }
+  .footer-whatsapp_img {
+    width: 50px;
+    height: 50px;
+    bottom: 5px;
+    right: 5px;
+  }
+  .footer-links {
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-left: 60px; 
+    margin-right: 0;
+    gap: 50px;
+    width: 40%;
+  }
+  .footer-contact {
+    
+    text-decoration: none;
+    color: white;
+  }
+  .footer-contact:hover {
+    text-decoration: underline;
+  }
+  .footer-instagram {
+    
+    text-decoration: none;
+    color: white;
+  } 
+  .footer-instagram:hover {
+    text-decoration: underline;
+  }
+  .footer-whatsapp {
+    
+    text-decoration: none;
+    color: white;
+  } 
+  .footer-whatsapp:hover {
+    text-decoration: underline;
+  }
+}
+  
 
 /* ==========================================================================
    UTILITY CLASSES FOR RESPONSIVE DESIGN
