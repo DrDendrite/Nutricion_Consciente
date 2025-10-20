@@ -2494,10 +2494,11 @@
   /* Hero Section */
   .start {
     width: 100%;
-    height: auto;
+    height: 100vh;
   }
   .start-container {
     width: 100%;
+    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -2516,7 +2517,7 @@
     width: 100%;
     opacity: 0.7;
     object-fit: cover;
-    height: auto;
+    height: 100%;
   }
   .start-box {
     width: 1400px;
@@ -2545,7 +2546,7 @@
     padding: 80px 0;
   }
   .about-me_title {
-    font-size: 48px;
+    font-size: 45px;
     margin-bottom: 30px;
     width: 95%;
   }
@@ -2555,11 +2556,12 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+    align-items: center;
     gap: 60px;
   }
   .about-me_pic {
-    width: 550px;
-    height: 650px;
+    width: 450px;
+    height: 550px;
     margin-bottom: 20px;
     object-fit: cover;
   }
@@ -2570,8 +2572,8 @@
     height: auto;
   }
   .about-me_info {
-    font-size: 28px;
-    line-height: 1.25;
+    font-size: 23px;
+    line-height: 1.4;
     margin: 10px;
   }
   .button-schedule {
@@ -2615,25 +2617,25 @@
     width: 100%;
     height: auto;
     margin-top: 0;
-    padding-bottom: 38px;
+    
   }
   .icons-grid_pan {
     width: 100%;
     height: auto;
     margin-top: 0;
-    padding-bottom: 138px;
+   
   }
   .icons-grid_messages {
     width: 100%;
     height: auto;
     margin-top: 0;
-    padding-bottom: 90px;
+  
   }
   .icons-grid_healthy {
     width: 100%;
     height: auto;
     margin-top: 0;
-    padding-bottom: 118px;
+    
   }
   .icons-description {
     font-size: 24px;
@@ -2647,7 +2649,7 @@
   /* Program Section - Social Media Posts */
   .program {
     width: 100%;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2655,10 +2657,10 @@
 
   .program-info {
     width: 70%;
-    height: 950px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
   }
 
@@ -2676,11 +2678,22 @@
     text-shadow: 2px 2px 8px rgba(245, 154, 131, 0.3);
     letter-spacing: 1px;
   }
+  .program-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 4px;
+    background: linear-gradient(135deg, #f59a83, #ff6b6b);
+    border-radius: 2px;
+  }
   
   .program-text {
     font-size: 34px;
     line-height: 1.7;
-    margin-bottom: 60px;
+    margin-top: 0px;
   }
 
   .program-grid.social-posts {
@@ -2688,7 +2701,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 60px;
     width: 70%;
-    margin-top: 150px;
+    margin-top: 240px;
   }
 
   .social-post {
@@ -2706,25 +2719,28 @@
 
   .social-post_image {
     width: 100%;
-    height: 350px;
+    height: 250px;
     object-fit: cover;
   }
 
   .social-post_content {
     padding: 35px;
+    height: 210px;
   }
 
   .social-post_text {
-    font-size: 32px;
+    font-size: 19px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     color: #333;
   }
 
   .social-post_author {
-    font-size: 28px;
+    font-size: 23px;
     font-weight: bold;
     color: #f59a83;
+    margin-top: 15px;
   }
 /*online appointment section*/
 .appointment {
@@ -2779,7 +2795,7 @@
   margin-bottom: 20px;
 }
 .appointment-list{
-  font-size: 22px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -2805,7 +2821,7 @@
   margin-top: 10px;
 }
 .appointment-list_steps {
-  font-size: 22px;
+  font-size: 20px;
   margin-left: 0;
   width: 80%;
   text-align: left;
@@ -3082,41 +3098,40 @@
     text-align: center;
   }
   .icons-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 70px;
-    width: 60%;
-    margin: 0;
+    display: flex;  
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    
   }
   .icons-grid_calendar {
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-    padding-bottom: 38px;
+    width: 90%;
+    height: 100%;
+    position: relative;
   }
   .icons-grid_pan {
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-    padding-bottom: 138px;
+    width: 90%;
+    height: 100%;
+    position: relative;
   }
   .icons-grid_messages {
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-    padding-bottom: 90px;
+    width: 90%;
+    height: 100%;
+    position: relative;
   }
   .icons-grid_healthy {
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-    padding-bottom: 118px;
+    width: 90%;
+    height: 100%;
+    position: relative;
   }
   .icons-description {
-    font-size: 28px;
+    font-size: 25px;
     text-align: center;
-    margin-top: 50px;
-    width: 100%;
+    margin-top: 30px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
