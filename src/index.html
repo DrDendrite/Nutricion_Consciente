@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Melissa Pineda - Nutrióloga</title>
     <link rel="stylesheet" href="index.css">
+    <script src="config.js"></script>
+    <script src="main.js" defer></script>
 </head>
 <body class = "body">
 
@@ -13,16 +15,17 @@
   <header class="nav">
     <nav class="nav-bar">
       <ul class="nav-list">
-        <li><a href="#" class="nav-list_start">Inicio</a></li>
-        <li><a href="#" class="nav-list_knowme">Conóceme</a></li>
-        <li><a href="#" class="nav-list_challenges">Testimonios</a></li>
-        <li><a href="#" class="nav-list_questions">FAQ</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#conoceme">Conóceme</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#citas">Citas</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="start">
+  <section id="inicio" class="start">
     <div class="start-container">
       <img src="../src/images/Logo.png" alt="Nutrición Consciente Logo" class="start-image_logo">
     <img src="../src/images/Post 7.JPG" alt="Nutrition Image" class="start-image_cover">
@@ -41,7 +44,7 @@
   </section>
 
   <!-- About Section -->
-  <section class="about">
+  <section id="conoceme" class="about">
       <h2 class="about-me_title">Licenciada en Nutrición | Especialista en Salud Hormonal y Nutrición Deportiva</h2>
       <div class="about-me">
       <img src="../src/images/IMG_8170.JPG" alt="Melissa Pineda" class="about-me_pic">
@@ -84,7 +87,7 @@
   </section>
 
   <!-- Social Media Posts Section -->
-  <section class="program">
+  <section id="testimonios" class="program">
     <div class="program-info">
       <h3 class="program-title">Testimonios y Transformaciones</h3>
       <p class="program-text">Mira los increíbles resultados de nuestros clientes</p>
@@ -120,7 +123,7 @@
   </section>
 
   <!-- Online Appointment Section -->
-  <section class="appointment">
+  <section id="citas" class="appointment">
     <div class="appointment-box">
       <h3 class="appointment-title">Agenda tu cita Online</h3>
     <img src="../src/images/Post 2B.JPG" alt="Online Appointment" class="appointment-list_image">
@@ -151,10 +154,21 @@
   </section>
 
   <!-- In-Person Appointment Section -->
-  <section class="inperson">
+  <section id="ubicacion" class="inperson">
     <div class="inperson-box">
       <h3 class="inperson-title">Agenda tu cita Presencial</h3>
-      <p class="inperson-address">C. Artemio del Valle Arizape 2827</p>
+      <p class="inperson-address">C. Artemio del Valle Arizape 2827, Guadalajara, Jalisco</p>
+      <div class="inperson-map-container" title="Haz clic para obtener direcciones en Google Maps">
+        <!-- Aquí irá el mapa de Google Maps -->
+        <iframe 
+          class="inperson-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.8!2d-103.3!3d20.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDM2JzAwLjAiTiAxMDPCsDE4JzAwLjAiVw!5e0!3m2!1ses!2smx!4v1234567890"
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación del consultorio">
+        </iframe>
+      </div>
       <button class="button button-schedule_inperson">Agendar</button>
     </div>
   </section>
@@ -172,5 +186,10 @@
         <a href="#" class="footer-whatsapp">Whats App</a>
       </div>
   </footer>
+
+  <!-- Botón de volver arriba -->
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+    ↑
+  </button>
 </body>
 </html>

@@ -1,0 +1,219 @@
+/* Animaciones y efectos parallax */
+
+/* Efecto parallax para imágenes de fondo */
+.start-image_cover,
+.appointment-list_image {
+  will-change: transform;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación de escala suave */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animación de deslizamiento lateral */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animación de gradiente para el título del programa */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Efecto hover mejorado para botones */
+.button-schedule,
+.button-appointment,
+.button-schedule_inperson,
+.button-program_info {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button-schedule:hover,
+.button-appointment:hover,
+.button-schedule_inperson:hover,
+.button-program_info:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(245, 154, 131, 0.3);
+}
+
+.button-schedule:active,
+.button-appointment:active,
+.button-schedule_inperson:active,
+.button-program_info:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(245, 154, 131, 0.2);
+}
+
+/* Efecto hover para tarjetas de testimonios */
+.social-post {
+  transition: all 0.3s ease;
+}
+
+.social-post:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Animación suave para la foto de perfil */
+.about-me_pic {
+  transition: transform 0.3s ease;
+}
+
+.about-me_pic:hover {
+  transform: scale(1.02);
+}
+
+/* Efecto de pulso suave para iconos */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.icons-grid img:hover {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Transición suave para todos los elementos */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Efecto de desenfoque al cargar */
+.fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Animación de entrada escalonada para elementos de la grilla */
+.icons-grid > div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.icons-grid > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.icons-grid > div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.icons-grid > div:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Efecto de resplandor para elementos interactivos */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(245, 154, 131, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(245, 154, 131, 0.8);
+  }
+}
+
+/* Mejora de rendimiento para animaciones */
+.start-image_cover,
+.appointment-list_image,
+.about-me_pic,
+.social-post,
+.icons-grid > div {
+  will-change: transform, opacity;
+}
+
+/* Botón de volver arriba */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #f59a83;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(245, 154, 131, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: #ff6b6b;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(245, 154, 131, 0.6);
+}
+
+.back-to-top:active {
+  transform: translateY(-2px);
+}
+
+/* Responsive para botón de volver arriba */
+@media screen and (max-width: 767px) {
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+}

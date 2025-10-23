@@ -43,34 +43,30 @@
     margin: 0 10px;
 }
 .nav-list a {
+    color: white;
+    font-size: 20px;
+    font-family: Coconat-Regular;
     text-decoration: none;
     transition: all 0.3s ease;
+    position: relative;
 }
+
 .nav-list a:hover {
     opacity: 0.8;
     transform: translateY(-2px);
 }
-.nav-list_start{
-    color: white;
-    font-size: 20px;
-    font-family: Coconat-Regular;
-    font-weight: 550;
+
+.nav-list a.active {
+    font-weight: 700;
 }
 
-.nav-list_knowme{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-family: Coconat-Regular;
-}
-
-.nav-list_challenges{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-family: Coconat-Regular;
-}
-
-.nav-list_questions{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-family: Coconat-Regular;
+.nav-list a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
 }

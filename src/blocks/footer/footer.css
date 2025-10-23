@@ -26,6 +26,10 @@
     text-decoration: none;
 }
 
+.footer-contact:hover {
+    text-decoration: underline;
+}
+
 .footer-instagram{
     color: white;
     text-decoration: none;
@@ -33,9 +37,17 @@
     margin-right: 10px;
 }
 
+.footer-instagram:hover {
+    text-decoration: underline;
+}
+
 .footer-whatsapp{
     color: white;
     text-decoration: none;
+}
+
+.footer-whatsapp:hover {
+    text-decoration: underline;
 }
 .footer-whatsapp_img{
     width: 50px;
