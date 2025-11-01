@@ -329,14 +329,17 @@
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
+    background-image: url(/src/images/Post\ 7.JPG);
+    background-size: cover;
+    background-position: center;
   }
 
-  .start-image_cover {
+  /*.start-image_cover {
     min-height: 100% !important;
     max-width: 100% !important;
     opacity: 0.7;
     object-fit: cover;
-  }
+  }*/
 
   .start-container {
     width: 100%;
@@ -561,51 +564,37 @@
     line-height: 1.5;
     margin-top: 1px;
   }
-  .program-grid.social-posts {
+  .program-grid {
     gap: 5px;
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto; 
+    margin-left: 0; 
     position: relative;
     scroll-behavior: smooth;
-    overflow-x: auto;
-    padding-bottom: 10px;
+    padding-left: 0;
   }
   .testimonials-slider {
     display: flex;
-    width: 80%;
+    width: 75%;
     gap: 10px;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
     padding-bottom: 10px;
-    margin-left: 12px;
-    padding-left: 0;
   }
   .social-post {
-    width: 80%;
+    width: 75%;
     height: 230px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin-bottom: 0px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .social-post_image {
-    width: 60%;
-    height: 130px;
-    object-fit:cover;
-    margin-top: 10px;
-    border-radius: 5px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -623,11 +612,11 @@
     color: #f59a83;
   }
   .slider-nav {
-    margin-left: -20px;
+    margin-left:  auto;
     margin-right: auto;
   }
   .slider-dots {
-    margin-left: -20px;
+    margin-left: auto;
     margin-right: auto;
   }
   /* Appointment Section */
@@ -654,7 +643,6 @@
   .appointment-list_image {
     width: auto;
     max-width: 100%;
-    height: 100%;
     object-fit: cover;
     margin-bottom: 20px;
     margin-left: 0;
@@ -665,7 +653,7 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 90%;
+    width: auto;
     height: auto;
     margin-top: 0;
     background-color: aliceblue;
@@ -673,28 +661,30 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
+    padding-left: 0%;
+    padding-right: 0%;  
   }
   .appointment-list_title{
     font-size: 20px;
-    width: 100%;
+    width: auto;
     text-align: left;
     margin-top: 10px;
     margin-bottom: 20px;
+    padding: 5px 20px;
   }
   .appointment-list{
     font-size: 15px;
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 70%;
+    width: auto;
     padding: 5px;
   }
   .appointment-list_steps_box{
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 90%;
+    width: auto;
     margin-top: 10px;
     background-color: aliceblue;
     opacity: 0.7;
@@ -702,6 +692,7 @@
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: auto;
+    padding-left: 0%;
   }
   .appointment-list_title_steps {
     font-size: 20px;
@@ -711,10 +702,11 @@
   .appointment-list_steps {
     font-size: 15px;
     margin-left: 0;
-    width: 80%;
+    width: auto;
     text-align: left;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding-left: 5px;
   }
   .button-appointment {
     width: 60%;
@@ -795,7 +787,7 @@
   }
   .footer-copyright {
     font-size: 10px;
-    width: 80%;
+    width: auto;
     text-align: center;
   }
   .footer-instagram_img{
