@@ -778,10 +778,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
   }
   .footer-icons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -793,7 +794,6 @@
   .footer-instagram_img{
     width: 30px;
     height: 30px;
-    margin-left: 10px;
   }
   .footer-whatsapp_img {
     width: 30px;
@@ -803,31 +803,27 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    align-items: center;
     margin-top: -10px;
-    width: 100%;
+    width: auto;
     gap: 10px;
     margin-left: auto;
     margin-right: auto;
-    justify-content: center;
+    text-align: center;
   }
   .footer-contact {
     font-size: 14px;
     text-decoration: none;
     color: white;
-    width: 25%;
   }
   .footer-instagram {
     font-size: 14px;
     text-decoration: none;
     color: white;
-    width: 25%;
   }
   .footer-whatsapp {
     font-size: 14px;
     text-decoration: none;
     color: white;
-    width: 25%;
   }
   
 }
@@ -2307,7 +2303,7 @@
   /* Footer */
   .footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center; 
     width: 100%;
@@ -2319,7 +2315,6 @@
   .footer-copyright {
     font-size: 10px;
     margin-top: 10px;
-    width: 60%;
     height: auto; 
     margin-left: 30px;
     margin-right: 10px;
@@ -2327,23 +2322,16 @@
   }
   .footer-icons {
     display: flex;
-    width: 80%;
-    height: 50px;
-    flex-direction: row;
-    margin-top: 2px;
-    margin-left: 40px; 
+    flex-direction: column;
     position: relative;   
   }
   .footer-instagram_img{
     width: 50px;
     height: 50px;
-    margin-left: 35px;
   }
   .footer-whatsapp_img {
     width: 55px;
     height: 55px;
-    bottom: 5px;
-    right: 5px;
   }
   .footer-links {
     font-size: 16px;
@@ -3276,7 +3264,7 @@
   /* Footer */
   .footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center; 
     width: 100%;
@@ -3284,50 +3272,16 @@
     color: white;
     padding: 20px 0;
   }
-  .footer-copyright {
-    font-size: 18px;
-    margin-top: 20px;
-    width: 60%;
-    height: auto; 
-  }
-  .footer-icons {
-    display: flex;
-    width: 80%;
-    height: 50px;
-    flex-direction: row;
-    margin-top: 2px;
-    margin-left: 0px; 
-    position: relative;   
-  }
-  .footer-instagram_img{
-    width: 40px;
-    height: 40px;
-    margin-top: 3px;
-    margin-left: 80px;
-  }
-  .footer-whatsapp_img {
-    width: 40px;
-    height: 40px;
-    bottom: 5px;
-    right: 5px;
-  }
-  .footer-links {
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    margin-top: 0px;
-    margin-left: 50px; 
-    margin-right: 0;
-    gap: 40px;
-    width: 40%;
-  }
+
   .footer-contact {
     text-decoration: none;
     color: white;
+    font-size: 20px;
   }
   .footer-instagram {
     text-decoration: none;
     color: white;
+    font-size: 20px;
   } 
   .footer-whatsapp {
     text-decoration: none;
@@ -3338,56 +3292,4 @@
 
   
 
-/* ==========================================================================
-   UTILITY CLASSES FOR RESPONSIVE DESIGN
-   ========================================================================== */
 
-/* Hide elements on mobile */
-@media screen and (max-width: 767px) {
-  .hide-mobile {
-    display: none !important;
-  }
-}
-
-/* Hide elements on tablet */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .hide-tablet {
-    display: none !important;
-  }
-}
-
-/* Hide elements on desktop */
-@media screen and (min-width: 1024px) {
-  .hide-desktop {
-    display: none !important;
-  }
-}
-
-/* Show only on mobile */
-@media screen and (min-width: 768px) {
-  .show-mobile-only {
-    display: none !important;
-  }
-}
-
-/* Show only on tablet */
-.show-tablet-only {
-  display: none !important;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .show-tablet-only {
-    display: block !important;
-  }
-}
-
-/* Show only on desktop */
-.show-desktop-only {
-  display: none !important;
-}
-
-@media screen and (min-width: 1024px) {
-  .show-desktop-only {
-    display: block !important;
-  }
-}

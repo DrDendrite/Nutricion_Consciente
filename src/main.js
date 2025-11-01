@@ -225,10 +225,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const messages = CONFIG.messages;
   const instagramUsername = CONFIG.instagramUsername;
 
-  // Función para abrir WhatsApp
+  // Función para abrir WhatsApp y enviar mensaje automáticamente
   function openWhatsApp(message) {
     const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    // Usar api.whatsapp.com para envío automático en lugar de wa.me
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
     window.open(whatsappURL, '_blank');
   }
 

@@ -4,7 +4,7 @@
 const CONFIG = {
   // Número de WhatsApp (código país + número sin espacios ni guiones)
   // Ejemplo: México (52) + 3221234567 = 5213221234567
-  whatsappNumber: '19197441584',
+  whatsappNumber: '523312661899',
   
   // Usuario de Instagram (sin @)
   instagramUsername: 'pinedanutrifit',
