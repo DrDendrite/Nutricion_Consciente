@@ -1,0 +1,194 @@
+/* Zoom Fix CSS - Mejora la experiencia en zoom 100%+ */
+
+/* Permitir que el body se ajuste sin límite máximo en zoom */
+.body {
+    max-width: 100% !important;
+    overflow-x: hidden;
+}
+
+/* Asegurar que el contenido no se desborde horizontalmente */
+* {
+    max-width: 100%;
+}
+
+/* Excepciones para elementos que necesitan mantener su ancho */
+img,
+iframe,
+.inperson-map {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navegación responsive en zoom */
+.nav {
+    max-width: 100% !important;
+}
+
+.nav-bar {
+    padding: 0 2%;
+    max-width: 100% !important;
+}
+
+.nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-list li {
+    margin: 0.25rem 0.5rem;
+}
+
+.nav-list a {
+    font-size: clamp(14px, 1.2vw, 20px);
+    white-space: nowrap;
+}
+
+/* Contenedores principales - usar ancho relativo */
+.start,
+.about,
+.icons,
+.program,
+.appointment,
+.inperson,
+.footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-sizing: border-box;
+}
+
+/* Cajas internas - ancho relativo en lugar de fijo */
+.about-box,
+.icons-box,
+.program-box,
+.appointment-box,
+.inperson-box {
+    width: 90% !important;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* Títulos - usar clamp para escalado fluido */
+h1, h2, h3,
+.start-title,
+.about-title,
+.icons-title,
+.program-title,
+.appointment-title,
+.inperson-title {
+    font-size: clamp(1.5rem, 3vw, 2.8rem) !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Texto - escalado fluido */
+p,
+.start-text,
+.about-text,
+.program-text,
+.appointment-text,
+.inperson-address {
+    font-size: clamp(0.9rem, 1.5vw, 1.8rem) !important;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Botones - tamaño responsive */
+.button,
+.button-schedule,
+.button-appointment,
+.button-schedule_inperson {
+    width: auto !important;
+    min-width: 150px;
+    max-width: 90%;
+    padding: 0.8rem 2rem;
+    font-size: clamp(0.9rem, 1.2vw, 1.25rem) !important;
+    white-space: nowrap;
+}
+
+/* Grids - ajustar columnas en zoom */
+.icons-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 1.5rem;
+    width: 100% !important;
+}
+
+.program-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 1.5rem;
+    width: 100% !important;
+}
+
+/* Imágenes - mantener aspecto pero ajustar tamaño */
+.start-image_cover,
+.appointment-list_image {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+}
+
+/* Testimonios - ajustar ancho en zoom */
+.testimonial-card {
+    max-width: 100% !important;
+    margin: 1rem auto;
+}
+
+/* Mapa - responsive en zoom */
+.inperson-map-container {
+    width: 95% !important;
+    max-width: 100% !important;
+    height: clamp(250px, 40vh, 500px) !important;
+}
+
+/* Footer - contenido apilado en zoom alto */
+.footer {
+    padding: 2rem 2%;
+}
+
+.footer-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-icon {
+    width: clamp(30px, 5vw, 50px) !important;
+    height: clamp(30px, 5vw, 50px) !important;
+}
+
+/* Back to top button - ajustar posición */
+.back-to-top {
+    right: clamp(10px, 2vw, 20px);
+    bottom: clamp(10px, 2vw, 20px);
+    width: clamp(40px, 5vw, 60px) !important;
+    height: clamp(40px, 5vw, 60px) !important;
+    font-size: clamp(1rem, 2vw, 1.5rem) !important;
+}
+
+/* Prevenir desbordamiento horizontal */
+body {
+    overflow-x: hidden;
+}
+
+/* Media query para zoom muy alto (>150%) */
+@media (min-width: 1px) and (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-list li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Asegurar que elementos con position: fixed se comporten bien */
+.nav,
+.back-to-top {
+    max-width: 100vw !important;
+}

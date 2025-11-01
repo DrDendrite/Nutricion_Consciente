@@ -3,100 +3,162 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff72;
     align-items: center;
-    padding: 80px 0;
-    margin-bottom: 0;
+    justify-content: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #e5d1ca 0%, #f5dcd4 50%, #eed4ca 100%);
+    position: relative;
+    overflow: hidden;
 }
 
+/* Elementos decorativos de fondo */
+.inperson::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(233, 158, 140, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.inperson::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    right: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(181, 102, 82, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Título principal */
 .inperson-title{
-    color: #b56652;
-    font-size:45px;
+    background: linear-gradient(135deg, #b56652, #E99E8C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 52px;
     text-align: center;
     font-family: Arapey-Italic;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
 }
 
+/* Línea decorativa debajo del título */
+.inperson-title::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #E99E8C, transparent);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* Contenedor principal con glassmorphism */
 .inperson-box {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.inperson-address{
-    color: #000000;
-    font-size: 24px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    max-width: 650px;
-    font-family: Arapey-Regular;
-    line-height: 170%;
-}
-
-.button-schedule_inperson{
-    background-color: #E99E8C;
-    border-radius: 10px;
-    height: 50px;
-    width: 200px;
-    font-size: 20px;
-    font-weight: 550;
-    color: white;
-    box-shadow: 5px 9px 9px 1px rgba(0, 0, 0, 0.4);
-    border: none;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(253, 250, 248, 0.8));
+    backdrop-filter: blur(15px);
+    padding: 60px 50px;
+    border-radius: 30px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     position: relative;
+    z-index: 1;
 }
 
-.button-schedule_inperson:hover {
-    background-color: #d88d7a;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(233, 158, 140, 0.4);
+/* Badge decorativo */
+.inperson-box::before {
+    content: '📍 Presencial';
+    position: absolute;
+    top: -18px;
+    left: 40px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4);
+    font-family: Arial, sans-serif;
 }
 
-/* Contenedor del mapa */
+/* Dirección con estilo moderno */
+.inperson-address{
+    color: #5a4a45;
+    font-size: 26px;
+    text-align: center;
+    margin: 30px 0 40px;
+    max-width: 700px;
+    font-family: Roboto-Regular;
+    font-weight: 500;
+    line-height: 1.6;
+    position: relative;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, rgba(233, 158, 140, 0.1), rgba(245, 167, 111, 0.1));
+    border-left: 4px solid #E99E8C;
+    border-radius: 12px;
+}
+
+/* Icono de ubicación */
+.inperson-address::before {
+    content: '📍';
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+/* Contenedor del mapa mejorado */
 .inperson-map-container {
     width: 100%;
-    max-width: 800px;
-    height: 400px;
+    max-width: 900px;
+    height: 450px;
     margin: 30px auto;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
     position: relative;
+    border: 3px solid rgba(233, 158, 140, 0.3);
 }
 
+/* Overlay de instrucción */
 .inperson-map-container::after {
-    content: '📍 Haz clic para obtener direcciones';
+    content: '�️ Haz clic para obtener direcciones';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(66, 133, 244, 0.95);
+    background: linear-gradient(135deg, #4A90E2, #5BA3F5);
     color: white;
-    padding: 12px;
+    padding: 15px;
     text-align: center;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
     opacity: 0;
     transform: translateY(100%);
     transition: all 0.3s ease;
     pointer-events: none;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .inperson-map-container:hover {
-    box-shadow: 0 12px 35px rgba(66, 133, 244, 0.3);
-    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(233, 158, 140, 0.4);
+    transform: translateY(-8px);
+    border-color: #E99E8C;
 }
 
 .inperson-map-container:hover::after {
@@ -106,8 +168,188 @@
 
 /* Iframe del mapa de Google Maps */
 .inperson-map {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
     border: none;
     pointer-events: none;
+    min-height: 100%;
+}
+
+/* Botón de agendar moderno */
+.button-schedule_inperson{
+    background: linear-gradient(135deg, #E99E8C, #d88d7a);
+    border-radius: 30px;
+    height: 60px;
+    width: 240px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 12px 35px rgba(233, 158, 140, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px auto 0;
+}
+
+/* Efecto de brillo en el botón */
+.button-schedule_inperson::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.button-schedule_inperson:hover::before {
+    left: 100%;
+}
+
+.button-schedule_inperson:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(233, 158, 140, 0.7);
+    background: linear-gradient(135deg, #d88d7a, #E99E8C);
+}
+
+.button-schedule_inperson:active {
+    transform: translateY(-2px);
+}
+
+/* Responsive para tablets */
+@media screen and (max-width: 1024px) {
+    .inperson {
+        padding: 60px 20px;
+    }
+    
+    .inperson-title {
+        font-size: 44px;
+    }
+    
+    .inperson-box {
+        padding: 50px 40px;
+    }
+    
+    .inperson-address {
+        font-size: 22px;
+    }
+    
+    .inperson-map-container {
+        height: 400px;
+    }
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+    .inperson {
+        padding: 50px 15px;
+    }
+    
+    .inperson-title {
+        font-size: 36px;
+    }
+    
+    .inperson-box {
+        padding: 40px 30px;
+        border-radius: 25px;
+    }
+    
+    .inperson-box::before {
+        font-size: 13px;
+        padding: 8px 18px;
+        left: 30px;
+    }
+    
+    .inperson-address {
+        font-size: 20px;
+        padding: 18px 25px;
+    }
+    
+    .inperson-map-container {
+        height: 350px;
+        border-radius: 15px;
+    }
+    
+    .inperson-map-container::after {
+        font-size: 15px;
+        padding: 12px;
+    }
+    
+    .button-schedule_inperson {
+        width: 220px;
+        height: 55px;
+        font-size: 18px;
+    }
+}
+
+/* Responsive para móviles pequeños */
+@media screen and (max-width: 480px) {
+    .inperson {
+        padding: 40px 15px;
+        min-height: auto;
+    }
+    
+    .inperson-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .inperson-title::after {
+        width: 80px;
+        height: 3px;
+        margin: 15px auto 0;
+    }
+    
+    .inperson-box {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+    
+    .inperson-box::before {
+        font-size: 12px;
+        padding: 6px 16px;
+        left: 20px;
+        top: -14px;
+    }
+    
+    .inperson-address {
+        font-size: 16px;
+        padding: 15px 20px;
+        margin: 20px 0 30px;
+        line-height: 1.5;
+    }
+    
+    .inperson-address::before {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+    
+    .inperson-map-container {
+        height: 280px;
+        border-radius: 15px;
+        margin: 25px auto;
+        max-width: 100%;
+    }
+    
+    .inperson-map-container::after {
+        font-size: 13px;
+        padding: 10px 8px;
+    }
+    
+    .button-schedule_inperson {
+        width: 100%;
+        max-width: 100%;
+        height: 50px;
+        font-size: 17px;
+        margin-top: 25px;
+    }
 }

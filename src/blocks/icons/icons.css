@@ -1,58 +1,181 @@
 .icons{
-    background-color: white;
-    height: 400px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f5f3 100%);
+    min-height: 500px;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
 }
+
+/* Elemento decorativo de fondo */
+.icons::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(233, 158, 140, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
 .icons-main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .icons-title{
     font-family: Arapey;
-    margin-bottom: 30px;
-    color: black;
-    font-size: 44px;
-    margin-top: 30px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #b56652, #E99E8C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 48px;
     text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Línea decorativa bajo el título */
+.icons-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #E99E8C, transparent);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Subtítulo descriptivo */
+.icons-subtitle {
+    font-family: Roboto-Regular;
+    font-size: 20px;
+    color: #5a4a45;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto 50px;
+    line-height: 1.6;
+    font-weight: 500;
 }
 
 .icons-grid{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    grid-gap: 300px;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 20px;
 }
 
+/* Tarjetas de iconos */
+.icons-grid > div {
+    background: linear-gradient(145deg, #ffffff, #faf8f7);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(233, 158, 140, 0.1);
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+}
+
+/* Efecto de hover en las tarjetas */
+.icons-grid > div:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 50px rgba(233, 158, 140, 0.25);
+    border-color: rgba(233, 158, 140, 0.4);
+}
+
+/* Efecto de brillo en hover */
+.icons-grid > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(233, 158, 140, 0.1) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.icons-grid > div:hover::before {
+    opacity: 1;
+}
+
+/* Contenedor de imagen con fondo colorido */
+.icons-grid img {
+    width: 80px;
+    height: 80px;
+    padding: 15px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Colores individuales para cada icono */
+.icons-grid_calendar img {
+    background: linear-gradient(135deg, #E99E8C, #f5b5a5);
+    box-shadow: 0 8px 20px rgba(233, 158, 140, 0.3);
+}
+
+.icons-grid_pan img {
+    background: linear-gradient(135deg, #f5a76f, #f8c291);
+    box-shadow: 0 8px 20px rgba(245, 167, 111, 0.3);
+}
+
+.icons-grid_messages img {
+    background: linear-gradient(135deg, #b56652, #c98275);
+    box-shadow: 0 8px 20px rgba(181, 102, 82, 0.3);
+}
+
+.icons-grid_healthy img {
+    background: linear-gradient(135deg, #81c784, #a5d6a7);
+    box-shadow: 0 8px 20px rgba(129, 199, 132, 0.3);
+}
+
+.icons-grid > div:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
 
 .icons-description{
-    font-family: Arapey-Regular;
-    font-size: 20px;
-    color: black;
+    font-family: Roboto-Regular;
+    font-size: 18px;
+    color: #5a4a45;
     text-align: center;
-    width: 300px;
-    margin-top: 5px;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
+    position: relative;
+    z-index: 1;
 }
+
+/* Estilos individuales ahora usan el grid */
 .icons-grid_calendar{
-    margin-top: 60px;
-    width: 100px;
-    height: 100px;
+    margin: 0;
+    width: 60%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
 .icons-grid_pan{
-    margin-top: 40px;
-    width: 100px;
-    height: 100px;
+    margin: 0;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,9 +183,9 @@
 }
 
 .icons-grid_messages{
-    margin-top: 60px;
-    width: 100px;
-    height: 100px;
+    margin: 0;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,9 +193,9 @@
 }
 
 .icons-grid_healthy {
-    margin-top: 35px;
-    width: 100px;
-    height: 100px;
+    margin: 0;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;

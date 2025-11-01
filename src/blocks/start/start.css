@@ -1,73 +1,168 @@
 .start{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Imagen de fondo con efecto parallax */
 .start-image_cover{
-    width: 1920px;
-    height: 100vh;
-    object-fit: cover;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    z-index: 0;
+    filter: brightness(1.05);
+}
+
+/* Overlay degradado para mejor legibilidad */
+.start::before {
+    width: 100%;
+    height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgb(0, 0, 0), rgba(90, 70, 65, 0.4));
     z-index: -2;
 }
 
-.start-box{
-    width: 1500px;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
+.start-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadeInUp 1s ease-out;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-
-.start-title{
-    color: #000000;
-    font-size: 50px;
-    font-family: Coconat;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    margin-top: -50px;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Logo principal con efecto elegante */
 .start-image_logo{
-    width: 300px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: cover;
-    margin-top: -170px;
+    width: 350px;
+    height: auto;
+    margin-bottom: 0px;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s ease;
+    position: relative;
 }
 
-.start-image_isotype{
-    width: 90px;
-    height: 90px;
-    margin-top: 70px;
+.start-image_logo:hover {
+    transform: scale(1.05);
 }
 
+/* Título principal moderno */
+.start-title{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 52px;
+    font-family: Arapey-Italic;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    line-height: 1.3;
+    position: relative;
+    color: white;
+    background-color: white;
+    text-shadow: -1px -1px 0 #000000, 1px -1px 0 #818080d0, -1px 1px 0 #9c9b9b, 1px 1px 0 #ffffff;
+}
+
+/* Caja de contenido con glassmorphism */
 .start-title_box{
-    width: 900px;
-    background-color: #f59a83d0;
-    margin-top: 50px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 950px;
+    background: linear-gradient(145deg, rgba(245, 154, 131, 0.9), rgba(233, 158, 140, 0.85));
+    backdrop-filter: blur(15px);
+    padding: 50px 60px;
+    border-radius: 30px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
+/* Efecto de brillo decorativo */
+.start-title_box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Lista de especialidades con estilo moderno */
 .start-title_list{
     color: #ffffff;
-    font-size: 25px;
-    line-height: 150%;
-    font-family: Coconat;
+    font-size: 26px;
+    line-height: 1.5;
+    font-family: Arapey-Italic;
+    font-weight: 600;
     text-align: center;
-    margin-top: 40px;
+    margin: 0 0 30px 0;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
 }
 
+/* Separador decorativo */
+.start-title_list::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* Texto descriptivo elegante */
 .start-title_text{
     color: #ffffff;
-    font-size: 33px;
-    font-family: Arapey;
+    font-size: 22px;
+    font-family: Roboto-Regular;
+    font-weight: 400;
     text-align: center;
-    margin-top: 50px;
+    line-height: 1.7;
+    margin: 0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
 }
+

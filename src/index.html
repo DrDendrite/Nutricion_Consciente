@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
   <title>Melissa Pineda - Nutrióloga</title>
     <link rel="stylesheet" href="index.css">
     <script src="config.js"></script>
@@ -14,7 +14,21 @@
   <!-- Header -->
   <header class="nav">
     <nav class="nav-bar">
-      <ul class="nav-list">
+      <!-- Logo -->
+      <div class="nav-logo">
+        <img src="../src/images/TipográficoBlack (1).png" alt="Nutrición Consciente">
+        
+      </div>
+      
+      <!-- Menu Hamburguesa -->
+      <button class="nav-hamburger" id="navToggle" aria-label="Menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Lista de navegación -->
+      <ul class="nav-list" id="navList">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#conoceme">Conóceme</a></li>
         <li><a href="#testimonios">Testimonios</a></li>
@@ -22,24 +36,23 @@
         <li><a href="#ubicacion">Ubicación</a></li>
       </ul>
     </nav>
+    
+    <!-- Overlay para cerrar el menú -->
+    <div class="nav-overlay" id="navOverlay"></div>
   </header>
 
   <!-- Hero Section -->
-  <section id="inicio" class="start">
+  <section id="inicio" class="start" src="../src/images/Post 7.JPG">
     <div class="start-container">
-      <img src="../src/images/Logo.png" alt="Nutrición Consciente Logo" class="start-image_logo">
-    <img src="../src/images/Post 7.JPG" alt="Nutrition Image" class="start-image_cover">
-    <div class="start-box">
-    <img src="../src/images/IsotipoBlack (1).png" alt="Nutrición logo" class="start-image_isotype">
-    <img src="../src/images/TipográficoBlack (1).png" alt="Nutrición logo" class="start-image_logo">
-    <h1 class="start-title">Nutrición Consciente, <br>Nutrición con Amor</h1>
-    <div class="start-title_box">
-      <h4 class="start-title_list">Enfermedades Hormonales, Enfermedades Gastrointestinales y Nutrición Deportiva.</h4>
-      <p class="start-title_text">Una alimentación consciente , nos llevará a la creación de buenos hábitos. 
-        En este lugar lograrás tu healthy era y disfrutaras el proceso.
-      </p>
-    </div>
-    </div>
+      <!--<img src="../src/images/Post 7.JPG" alt="Nutrition Image" class="start-image_cover">-->
+      <img src="../src/images/IsotipoBlack (1).png" alt="Nutrición Consciente Logo" class="start-image_logo">
+      <h1 class="start-title">Nutrición Consciente, <br>Nutrición con Amor</h1>
+      <div class="start-title_box">
+        <h4 class="start-title_list">Enfermedades Hormonales, Enfermedades Gastrointestinales y Nutrición Deportiva.</h4>
+        <p class="start-title_text">Una alimentación consciente, nos llevará a la creación de buenos hábitos. 
+          En este lugar lograrás tu healthy era y disfrutarás el proceso.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -49,11 +62,12 @@
       <div class="about-me">
       <img src="../src/images/IMG_8170.JPG" alt="Melissa Pineda" class="about-me_pic">
       <div class="about-me_box">
-        <p class="about-me_info">Egresada de la Universidad de Guadalajara. Desde siempre, he sido una apasionada del ejercicio y la alimentación consciente. Sin embargo, mi camino hacia un enfoque verdaderamente saludable no fue inmediato; fue a través de la experiencia que comprendí la importancia del equilibrio.
-          He aprendido que cuidarnos a nosotros mismos implica disfrutar de lo que amamos, mientras avanzamos hacia nuestras metas de bienestar. Este equilibrio entre el disfrute y el autocuidado es lo que me motiva a compartir mi conocimiento contigo.
-          Mi misión es enseñarte a nutrirte de manera consciente, disfrutando de los alimentos de forma sostenible y con amor propio. Siempre desde una perspectiva que considera los pilares esenciales: una alimentación balanceada, la actividad física y la salud mental.
-          Este es tu espacio seguro, donde tendrás acceso a las herramientas que necesitas para alcanzar tus objetivos de una manera saludable, plena y duradera.</p>
-        <button class="button button-schedule">Agenda tu Cita</button>
+        <p class="about-me_info">Egresada de la <strong>Universidad de Guadalajara</strong>, apasionada del ejercicio y la alimentación consciente. A través de mi experiencia aprendí que el verdadero bienestar se encuentra en el <strong>equilibrio</strong>: disfrutar lo que amas mientras cuidas tu salud.
+          <br><br>
+          Mi misión es enseñarte a nutrirte de forma sostenible, considerando los <strong>tres pilares esenciales</strong>: alimentación balanceada, actividad física y salud mental.
+          <br><br>
+          Este es tu <strong>espacio seguro</strong>. Aquí encontrarás las herramientas para alcanzar tus objetivos de manera saludable, plena y duradera. ¡Comencemos juntos tu transformación!</p>
+        <button class="button button-schedule">📅 Agenda tu Cita</button>
     </div>
       </div>
   </section>
@@ -62,25 +76,26 @@
   <section class="icons">
     <div class="icons-main">
       <h3 class="icons-title">Que tu alimento sea tu medicina.</h3>
+        <p class="icons-subtitle">
+          Transforma tu vida con programas personalizados, recetas deliciosas y herramientas sostenibles 
+          que mejorarán tu salud física, mental y digestiva.
+        </p>
       <div class="icons-grid">
         <div class="icons-grid_calendar">
           <img src="../src/images/calendario.png" alt="Feature Icon" class="mb-2">
-          <p class="icons-description">Programas nutricionales personalizados.</p>
-
-          </p>
+            <p class="icons-description">📋 Programas nutricionales 100% personalizados a tus necesidades y objetivos</p>
         </div>
         <div class="icons-grid_pan">
           <img src="../src/images/Pan.png" alt="Feature Icon" class="mb-2">
-          <p class="icons-description">Recetas deliciosas y fáciles de preparar.</p>
+            <p class="icons-description">🍽️ Recetas deliciosas, fáciles de preparar y adaptadas a tu estilo de vida</p>
         </div>
         <div class="icons-grid_messages">
           <img src="../src/images/Messages.png" alt="Feature Icon" class="mb-2">
-          <p class="icons-description">Herramientas y hábitos sostenibles y conscientes.
-          </p>
+            <p class="icons-description">💪 Herramientas prácticas para crear hábitos sostenibles y conscientes</p>
         </div>
         <div class="icons-grid_healthy">
           <img src="../src/images/Healthy.png" alt="Feature Icon" class="mb-4">
-          <p class="icons-description">Mejora tu salud mental, digestiva  y amor propio.</p>
+            <p class="icons-description">✨ Mejora tu salud mental, digestiva y fortalece tu amor propio</p>
         </div>
       </div>
     </div>
@@ -90,35 +105,59 @@
   <section id="testimonios" class="program">
     <div class="program-info">
       <h3 class="program-title">Testimonios y Transformaciones</h3>
-      <p class="program-text">Mira los increíbles resultados de nuestros clientes</p>
+      <p class="program-text">Historias reales de personas que transformaron su salud y vida</p>
     </div>
-    <div class="program-grid social-posts">
-      <!-- Social Media Post 1 -->
-      <div class="social-post">
-        <img src="../src/images/model 1.jpeg" alt="Cliente Transformación 1" class="social-post_image">
-        <div class="social-post_content">
-          <p class="social-post_text">"Gracias a Melissa logré mi peso ideal y mejoré mi relación con la comida. ¡Recomendada al 100%!"</p>
-          <span class="social-post_author">- María G.</span>
+    <div class="program-grid">
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <!-- Testimonio 1 -->
+        <div class="social-post">
+          <div class="social-post_content">
+            <p class="social-post_text">"Meli ha sabido acompañarme en este proceso de aprender a incorporar hábitos de alimentación saludable y conscientes, siempre desde el cuidado, la empatía y el amor propio. Su cercanía, guía y seguimiento constante han sido fundamentales para mantenerme motivada y comprometida. Confiar en su trabajo ha sido, sin duda, una de las mejores decisiones que he tomado por mí."</p>
+            <span class="social-post_author">⭐ Nora Arreola</span>
+          </div>
+        </div>
+        
+        <!-- Testimonio 2 -->
+        <div class="social-post">
+          <div class="social-post_content">
+            <p class="social-post_text">"Llegué a la consulta por recomendación de un amigo, y desde el primer momento supe que había tomado una excelente decisión. En tan solo el primer mes, noté cómo mi cuerpo comenzaba a compactarse, a fortalecerse, y mis músculos empezaban a crecer poco a poco. Durante las consultas me sentí muy segura y comprendida. El ambiente es de confianza, y eso hace toda la diferencia cuando estás trabajando en tu bienestar físico y emocional. ¡100% recomendado!"</p>
+            <span class="social-post_author">⭐ Michelle Velázquez</span>
+          </div>
+        </div>
+        
+        <!-- Testimonio 3 -->
+        <div class="social-post">
+          <div class="social-post_content">
+            <p class="social-post_text">"Mi experiencia con Meli ha sido excepcional. Desde el inicio me brindó un trato humano, empático y lleno de motivación. Su acompañamiento ha sido constante, siempre escuchando mis necesidades y adaptando el plan a mi estilo de vida. Gracias a su guía he visto un gran progreso, no solo en mis resultados físicos, sino también en mis hábitos y bienestar general. Sin duda, la recomiendo ampliamente a quienes buscan un cambio real y sostenible en su salud."</p>
+            <span class="social-post_author">⭐ Yolanda Cruz</span>
+          </div>
+        </div>
+
+        <!-- Testimonio 4 -->
+        <div class="social-post">
+          <div class="social-post_content">
+            <p class="social-post_text">"Llegué a consulta con Meli por una bonita coincidencia. No solo he tenido cambios físicos positivos como pérdida de grasa corporal y ganancia de masa muscular, también he tomado conciencia de lo importante que es mi alimentación y el autocuidado. El SOP de mi hija quedó totalmente controlado con alimentación sin necesidad de tratamientos hormonales agresivos. Las consultas son excelentes, me siento en confianza de preguntar todo. Totalmente recomiendo su trabajo, es un trabajo en equipo y se logran excelentes resultados no solo a nivel físico, sino también emocional y psicológico. ¡Gracias Meli! ☺"</p>
+            <span class="social-post_author">⭐ Edith González</span>
+          </div>
+        </div>
+
+        <!-- Testimonio 5 -->
+        <div class="social-post">
+          <div class="social-post_content">
+            <p class="social-post_text">"Melissa siempre una gran profesional acompañando en todo momento al paciente, no solamente a bajar números en talla, sino ayudando cuando se tiene un tema con la comida. No nos hace sentir culpables porque no seguimos el plan como se debe, por el contrario, nos inspira y nos ayuda a tener confianza en nosotros mismos para poder crear un cambio sostenible. Siempre de muy buena actitud y solucionando las dudas que pudieran surgir, dando opciones diversas para que la mente no detecte que estás 'a dieta'. Recomiendo mucho acudir a ella para poder tener un gran cambio físico, pero sobretodo mental."</p>
+            <span class="social-post_author">⭐ Héctor Flores</span>
+          </div>
         </div>
       </div>
       
-      <!-- Social Media Post 2 -->
-      <div class="social-post">
-        <img src="../src/images/model 2.png" alt="Cliente Transformación 2" class="social-post_image">
-        <div class="social-post_content">
-          <p class="social-post_text">"Mi salud digestiva mejoró increíblemente. Ya no tengo problemas estomacales y me siento con más energía."</p>
-          <span class="social-post_author">- Ana L.</span>
-        </div>
+      <!-- Navigation Buttons -->
+      <div class="slider-nav">
+        <button class="slider-btn" id="prevBtn" aria-label="Anterior">‹</button>
+        <button class="slider-btn" id="nextBtn" aria-label="Siguiente">›</button>
       </div>
       
-      <!-- Social Media Post 3 -->
-      <div class="social-post">
-        <img src="../src/images/model 3.jpg" alt="Cliente Transformación 3" class="social-post_image">
-        <div class="social-post_content">
-          <p class="social-post_text">"El programa personalizado fue exactamente lo que necesitaba. Bajé 15kg en 4 meses de forma saludable."</p>
-          <span class="social-post_author">- Carmen R.</span>
-        </div>
-      </div>
+      <!-- Dots Indicators -->
+      <div class="slider-dots" id="sliderDots"></div>
     </div>
   </section>
 
@@ -127,7 +166,7 @@
     <div class="appointment-box">
       <h3 class="appointment-title">Agenda tu cita Online</h3>
     <img src="../src/images/Post 2B.JPG" alt="Online Appointment" class="appointment-list_image">
-    <div class="appointment-list_box">
+     <div class="appointment-list_box">
         <h4 class="appointment-list_title">Consulta personalizada Online</h4>
         <ul class="appointment-list">
           <li>Videollamada inicial</li>
@@ -162,7 +201,8 @@
         <!-- Aquí irá el mapa de Google Maps -->
         <iframe 
           class="inperson-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.8!2d-103.3!3d20.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDM2JzAwLjAiTiAxMDPCsDE4JzAwLjAiVw!5e0!3m2!1ses!2smx!4v1234567890"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.8!2d-103.3!3d20.6!2m3!1f0!2f0!3f0!3m2
+          !1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDM2JzAwLjAiTiAxMDPCsDE4JzAwLjAiVw!5e0!3m2!1ses!2smx!4v1234567890"
           allowfullscreen="" 
           loading="lazy" 
           referrerpolicy="no-referrer-when-downgrade"

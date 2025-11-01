@@ -1,71 +1,122 @@
-.footer{
+/* Footer con diseño moderno */
+.footer {
     position: relative;
-    height: 5vh;
-    background-color: rgba(206, 156, 145, 1);
+    background: linear-gradient(135deg, #b56652 0%, #ce9c91 50%, #E99E8C 100%);
+    padding: 50px 20px 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.15);
 }
 
-.footer-icons{
-    color: white;
-    width: 300px;
-    height: 200px;
-    margin-left: 385px;
+/* Contenedor de iconos y copyright */
+.footer-icons {
     display: flex;
-    gap: 20px;
-    margin-top: -90px;
-    }
-
-.footer-links{
-    margin-left: 430px;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 800px;
 }
 
-.footer-contact{
+/* Texto de copyright */
+.footer-copyright {
     color: white;
-    text-decoration: none;
-}
-
-.footer-contact:hover {
-    text-decoration: underline;
-}
-
-.footer-instagram{
-    color: white;
-    text-decoration: none;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.footer-instagram:hover {
-    text-decoration: underline;
-}
-
-.footer-whatsapp{
-    color: white;
-    text-decoration: none;
-}
-
-.footer-whatsapp:hover {
-    text-decoration: underline;
-}
-.footer-whatsapp_img{
-    width: 50px;
-    height: 50px;
-
-}
-
-.footer-instagram_img{
-    width: 50px;
-    height: 50px;
-}
-
-.footer-copyright{
-    color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Arapey-Italic;
-    width: 500px;
-    height: 50px;
-    margin-top: 16px;
-    margin-left: 10px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
 }
+
+/* Contenedor de imágenes de redes sociales */
+.footer-icons > img {
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    filter: brightness(1);
+}
+
+.footer-instagram_img,
+.footer-whatsapp_img {
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+.footer-instagram_img:hover,
+.footer-whatsapp_img:hover {
+    transform: translateY(-5px) scale(1.1);
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
+}
+
+/* Contenedor de enlaces */
+.footer-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos de enlaces */
+.footer-contact,
+.footer-instagram,
+.footer-whatsapp {
+    color: white;
+    text-decoration: none;
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de subrayado animado */
+.footer-contact::after,
+.footer-instagram::after,
+.footer-whatsapp::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.footer-contact:hover,
+.footer-instagram:hover,
+.footer-whatsapp:hover {
+    color: #ffddd4;
+    transform: translateY(-2px);
+}
+
+.footer-contact:hover::after,
+.footer-instagram:hover::after,
+.footer-whatsapp:hover::after {
+    width: 100%;
+}
+
+/* Separador visual */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 400px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    border-radius: 2px;
+}
+

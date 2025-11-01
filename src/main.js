@@ -2,6 +2,58 @@
 // Animaciones y vida para Nutrición Consciente
 
 document.addEventListener('DOMContentLoaded', () => {
+  // ========== MENÚ HAMBURGUESA ==========
+  const navToggle = document.getElementById('navToggle');
+  const navList = document.getElementById('navList');
+  const navOverlay = document.getElementById('navOverlay');
+  const navLinks = document.querySelectorAll('.nav-list a');
+  
+  // Toggle del menú hamburguesa
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navList.classList.toggle('active');
+      navOverlay.classList.toggle('active');
+      
+      // Prevenir scroll del body y del html
+      if (navList.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+      } else {
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+      }
+    });
+  }
+  
+  // Cerrar menú al hacer clic en el overlay
+  if (navOverlay) {
+    navOverlay.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navList.classList.remove('active');
+      navOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    });
+  }
+  
+  // Cerrar menú al hacer clic en un enlace
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        navToggle.classList.remove('active');
+        navList.classList.remove('active');
+        navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+      }
+    });
+  });
+
   // Animación de aparición para los bloques principales
   const sections = document.querySelectorAll('.start, .about, .icons, .program, .appointment, .inperson, .footer');
   sections.forEach(section => {
@@ -12,8 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 400);
   });
 
-  // Efecto hover en botones
-  const buttons = document.querySelectorAll('button');
+  // Efecto hover en botones (excepto el hamburguesa)
+  const buttons = document.querySelectorAll('button:not(.nav-hamburger)');
   buttons.forEach(btn => {
     btn.addEventListener('mouseenter', () => {
       btn.style.transform = 'scale(1.05)';
@@ -26,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Navegación suave y resaltado de sección activa
-  const navLinks = document.querySelectorAll('.nav-list a');
   
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -277,5 +328,63 @@ document.addEventListener('DOMContentLoaded', () => {
   const addressElement = document.querySelector('.inperson-address');
   if (addressElement && CONFIG.location.address) {
     addressElement.textContent = CONFIG.location.address;
+  }
+
+  // Testimonials Slider Functionality
+  const slider = document.getElementById('testimonialsSlider');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dotsContainer = document.getElementById('sliderDots');
+  
+  if (slider && prevBtn && nextBtn && dotsContainer) {
+    const cards = slider.querySelectorAll('.social-post');
+    
+    // Create dots dynamically
+    cards.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        const targetCard = cards[index];
+        const scrollPosition = targetCard.offsetLeft - slider.offsetLeft;
+        slider.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      });
+      dotsContainer.appendChild(dot);
+    });
+    
+    // Navigation buttons
+    prevBtn.addEventListener('click', () => {
+      const cardWidth = cards[0].offsetWidth;
+      const gap = 30; // gap between cards
+      slider.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      const cardWidth = cards[0].offsetWidth;
+      const gap = 30;
+      slider.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+    });
+    
+    // Update active dot on scroll
+    let scrollTimeout;
+    slider.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const scrollPosition = slider.scrollLeft + slider.offsetWidth / 2;
+        let activeIndex = 0;
+        
+        cards.forEach((card, index) => {
+          const cardStart = card.offsetLeft - slider.offsetLeft;
+          const cardEnd = cardStart + card.offsetWidth;
+          if (scrollPosition >= cardStart && scrollPosition <= cardEnd) {
+            activeIndex = index;
+          }
+        });
+        
+        document.querySelectorAll('.dot').forEach((dot, i) => {
+          dot.classList.toggle('active', i === activeIndex);
+        });
+      }, 100);
+    });
   }
 });

@@ -1,95 +1,260 @@
 .appointment{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-.appointment-title{
-    color: rgba(167, 119, 107, 1);
-    font-size: 60px;
-    text-align: center;
-    font-family: Coconat;
-    margin-top: 40px;
+/* Imagen de fondo con overlay */
+.appointment-list_image{
+    position: absolute;
+    width: 100%;
+    min-width: 100vh;
+    object-fit: cover;
+    z-index: 0;
+    background: linear-gradient(135deg, rgba(152, 122, 114, 0.2), rgba(181, 102, 82, 0.2));
+}
+
+/* Overlay oscuro sobre la imagen para mejor legibilidad */
+.appointment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(232, 226, 226, 0.5), rgba(234, 231, 230, 0.6));
+    z-index: 1;
 }
 
 .appointment-box{
-    background-color: #ffffff;
-    height: 15vh;
-    width: 1920px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.appointment-list_image{
-    width: 1580px;
-    height: 100vh;
-    object-fit: cover;
-    margin-left: 165px;
-    margin-right: auto;
-    position: absolute;
-    z-index: -2;
+.appointment-title{
+    background-clip: text;
+    font-size: 56px;
+    text-align: center;
+    font-family: Arapey-Italic;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
+/* Línea decorativa debajo del título */
+.appointment-title::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #E99E8C, transparent);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+/* Contenedor principal con las dos columnas */
 .appointment-list_box{
-    width: 1500px;
-    background-color: #ffffffd0;
-    height: 40vh;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(253, 250, 248, 0.95));
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 170px;
+    max-width: 1000px;
+}
+
+/* Badge decorativo */
+.appointment-list_box::before {
+    content: '💻 Online';
+    position: absolute;
+    top: -18px;
+    left: 40px;
+    background: linear-gradient(135deg, #4A90E2, #5BA3F5);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.4);
+    font-family: Arial, sans-serif;
 }
 
 .appointment-list_title{
-    color: #000000;
-    font-size: 30px;
+    color: #b56652;
+    font-size: 32px;
     text-align: left;
-    margin-top: 20px;
-    font-family: Coconat;
-    margin-left: 30px;
+    font-family: Arapey-Italic;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+    margin-top: 0px;
+}
+
+.appointment-list_title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #E99E8C, #f5a76f);
+    margin-top: 12px;
+    border-radius: 2px;
 }
 
 .appointment-list{
-    margin-top: -20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 18px;    
-    font-weight: 550;
-    line-height: 150%;
-    color: rgb(167, 119, 107, 1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #5a4a45;
     font-family: Roboto-Regular;
-    width: 500px;
 }
 
-.appointment-list_steps{
-    margin-left: 600px;
-    font-size: 18px;    
-    font-weight: 550;
-    line-height: 150%;
-    color: rgb(195, 136, 121);
-    margin-top: -180px;
-    font-family: Roboto-Regular;
+.appointment-list li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.appointment-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Columna de pasos */
+.appointment-list_steps_box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    max-width: 750px;
 }
 
 .appointment-list_title_steps{
-    color: #000000;
-    font-size: 30px;
-    margin-left: 620px;
-    margin-top: -230px;
+    color: #b56652;
+    font-size: 32px;
+    text-align: left;
+    font-family: Arapey-Italic;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.appointment-list_title_steps::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #E99E8C, #f5a76f);
+    margin-top: 12px;
+    border-radius: 2px;
+}
+
+.appointment-list_steps{
+    list-style: none;
+    counter-reset: step-counter;
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 2;
+    color: #5a4a45;
+    font-family: Roboto-Regular;
+}
+
+.appointment-list_steps li {
+    counter-increment: step-counter;
+    padding-left: 45px;
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.appointment-list_steps li::before {
+    content: counter(step-counter);
     position: absolute;
-    font-family: Coconat;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #E99E8C, #f5a76f);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(233, 158, 140, 0.3);
 }
 
 .button-appointment{
-    background-color: #E99E8C;
-    border-radius: 10px;
-    height: 50px;
-    width: 200px;
+    background: linear-gradient(135deg, #E99E8C, #d88d7a);
+    border-radius: 30px;
+    height: 60px;
+    width: 240px;
     font-size: 20px;
-    font-weight: 550;
+    font-weight: 700;
     color: white;
-    box-shadow: 5px 9px 9px 1px rgba(0, 0, 0, 0.4);
-    border-width: 2px;
-    margin-top: 40px;
-    margin-left: 620px;
-    margin-right: auto;
+    box-shadow: 0 12px 35px rgba(233, 158, 140, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
     position: relative;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px auto;
 }
+
+/* Efecto de brillo en el botón */
+.button-appointment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.button-appointment:hover::before {
+    left: 100%;
+}
+
+.button-appointment:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(233, 158, 140, 0.7);
+    background: linear-gradient(135deg, #d88d7a, #E99E8C);
+}
+
+.button-appointment:active {
+    transform: translateY(-2px);
+}
+
