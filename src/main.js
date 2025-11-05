@@ -8,27 +8,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const navOverlay = document.getElementById('navOverlay');
   const navLinks = document.querySelectorAll('.nav-list a');
   
+  // Variable para guardar la posición del scroll
+  let scrollPosition = 0;
+  
   // Toggle del menú hamburguesa
   if (navToggle) {
-    navToggle.addEventListener('click', () => {
+    navToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
       navToggle.classList.toggle('active');
       navList.classList.toggle('active');
       navOverlay.classList.toggle('active');
       
-      // Prevenir scroll del body y del html
+      // Prevenir scroll del body y mantener posición
       if (navList.classList.contains('active')) {
+        // Guardar posición actual
+        scrollPosition = window.pageYOffset;
         document.body.style.overflow = 'hidden';
         document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition}px`;
         document.body.style.width = '100%';
       } else {
         document.body.style.overflow = '';
         document.body.style.position = '';
+        document.body.style.top = '';
         document.body.style.width = '';
+        // Restaurar posición de scroll
+        window.scrollTo(0, scrollPosition);
       }
     });
-  }
-  
-  // Cerrar menú al hacer clic en el overlay
+  }  // Cerrar menú al hacer clic en el overlay
   if (navOverlay) {
     navOverlay.addEventListener('click', () => {
       navToggle.classList.remove('active');
@@ -36,7 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
       navOverlay.classList.remove('active');
       document.body.style.overflow = '';
       document.body.style.position = '';
+      document.body.style.top = '';
       document.body.style.width = '';
+      // Restaurar posición de scroll
+  
     });
   }
   
@@ -49,7 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
         navOverlay.classList.remove('active');
         document.body.style.overflow = '';
         document.body.style.position = '';
+        document.body.style.top = '';
         document.body.style.width = '';
+        // No restaurar scroll aquí porque el usuario quiere navegar a otra sección
       }
     });
   });
