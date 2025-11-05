@@ -124,6 +124,14 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY + 100;
     
+    // Back to top button
+    if (window.pageYOffset > 300) {
+      backToTopButton.classList.add('show');
+    } else {
+      backToTopButton.classList.remove('show');
+    }
+    
+    // Active nav link
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
@@ -138,6 +146,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
+    
+    // Parallax para elementos
+    parallaxSections.forEach(element => {
+      const rect = element.getBoundingClientRect();
+      const scrollPercent = (window.innerHeight - rect.top) / window.innerHeight;
+      
+      if (scrollPercent > 0 && scrollPercent < 1) {
+        const translateY = (scrollPercent - 0.5) * 20;
+        element.style.transform = `translateY(${translateY}px)`;
+        element.style.transition = 'transform 0.1s ease-out';
+      }
+    });
+    
+    // Paralaje para título principal
+    const startTitle = document.querySelector('.start-title');
+    if (startTitle) {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * 0.3;
+      startTitle.style.transform = `translateY(${rate}px)`;
+      startTitle.style.opacity = Math.max(1 - scrolled / 500, 0);
+    }
   });
 
   // Animación de entrada para testimonios al hacer scroll
@@ -158,22 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(testimonial);
   });
 
-
   // Parallax suave para elementos al hacer scroll
   const parallaxSections = document.querySelectorAll('.about-me_pic, .icons-grid_calendar, .icons-grid_pan, .icons-grid_messages, .icons-grid_healthy');
-  
-  window.addEventListener('scroll', () => {
-    parallaxSections.forEach(element => {
-      const rect = element.getBoundingClientRect();
-      const scrollPercent = (window.innerHeight - rect.top) / window.innerHeight;
-      
-      if (scrollPercent > 0 && scrollPercent < 1) {
-        const translateY = (scrollPercent - 0.5) * 20;
-        element.style.transform = `translateY(${translateY}px)`;
-        element.style.transition = 'transform 0.1s ease-out';
-      }
-    });
-  });
 
   // Efecto de escala suave en las tarjetas de testimonios al hacer hover
   testimonials.forEach(card => {
@@ -207,31 +222,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Botón de volver arriba
   const backToTopButton = document.getElementById('backToTop');
-  
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-      backToTopButton.classList.add('show');
-    } else {
-      backToTopButton.classList.remove('show');
-    }
-  });
 
   backToTopButton.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-  });
-
-  // Efecto de paralaje suave para el título principal
-  window.addEventListener('scroll', () => {
-    const startTitle = document.querySelector('.start-title');
-    if (startTitle) {
-      const scrolled = window.pageYOffset;
-      const rate = scrolled * 0.3;
-      startTitle.style.transform = `translateY(${rate}px)`;
-      startTitle.style.opacity = Math.max(1 - scrolled / 500, 0);
-    }
   });
 
   // Funcionalidad de WhatsApp para botones de agendar cita
