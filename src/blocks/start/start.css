@@ -160,7 +160,7 @@
 /* Texto descriptivo elegante */
 .start-title_text{
     color: #ffffff;
-    font-size: 22px;
+    font-size: 22px !important;
     font-family: Roboto-Regular;
     font-weight: 400;
     text-align: center;

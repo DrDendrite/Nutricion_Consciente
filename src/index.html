@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' http://192.168.50.3:5000;">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-  <title>Melissa Pineda - Nutrióloga</title>
+  <title>Melissa Pineda - Nutrióloga Hormonal y Deportiva</title>
   <link rel="stylesheet" href="index.css">
   <script src="config.js"></script>
   <script src="main.js" defer></script>
@@ -16,7 +17,7 @@
     <nav class="nav-bar">
       <!-- Logo -->
       <div class="nav-logo">
-        <img src="./images/TipográficoBlack (1).png" alt="Nutrición Consciente">
+        <img src="./images/Melissa-Pineda_Nutriologa.png" alt="Melissa Pineda - Nutrición Hormonal y Deportiva">
       </div>
       
       <!-- Menu Hamburguesa -->
@@ -32,7 +33,7 @@
         <li><a href="#conoceme">Conóceme</a></li>
         <li><a href="#testimonios">Testimonios</a></li>
         <li><a href="#citas">Citas</a></li>
-        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
     
@@ -43,13 +44,13 @@
   <!-- Hero Section -->
   <section id="inicio" class="start">
     <div class="start-container">
-      <img src="./images/IsotipoBlack (1).png" alt="Nutrición Consciente Logo" class="start-image_logo">
-      <h1 class="start-title">Nutrición Consciente, <br>Nutrición con Amor</h1>
+      <img src="./images/Melissa-Isotope_logo.png" alt="Nutrición Hormonal y Deportiva Logo" class="start-image_logo">
+      <h1 class="start-title">Nutrición Hormonal, <br>Nutrición Deportiva</h1>
       <div class="start-title_box">
-        <h4 class="start-title_list">Enfermedades Hormonales, Enfermedades Gastrointestinales y Nutrición Deportiva.</h4>
-        <p class="start-title_text">Una alimentación consciente, nos llevará a la creación de buenos hábitos. 
+        <h2 class="start-title_list">Enfermedades Hormonales y Enfermedades Gastrointestinales</h2>
+        <h3 class="start-title_text">Una alimentación consciente, nos llevará a la creación de buenos hábitos. 
           En este lugar lograrás tu healthy era y disfrutarás el proceso.
-        </p>
+        </h3>
       </div>
     </div>
   </section>
@@ -58,7 +59,7 @@
   <section id="conoceme" class="about">
     <h2 class="about-me_title">Licenciada en Nutrición | Especialista en Salud Hormonal y Nutrición Deportiva</h2>
     <div class="about-me">
-      <img src="./images/IMG_8170.JPG" alt="Melissa Pineda" class="about-me_pic">
+      <img src="./images/IMG_8170.JPG" alt="Melissa Pineda - Nutrióloga Hormonal y Deportiva" class="about-me_pic">
       <div class="about-me_box">
         <p class="about-me_info">Egresada de la <strong>Universidad de Guadalajara</strong>, apasionada del ejercicio y la alimentación consciente. A través de mi experiencia aprendí que el verdadero bienestar se encuentra en el <strong>equilibrio</strong>: disfrutar lo que amas mientras cuidas tu salud.
           <br><br>
@@ -220,6 +221,54 @@ Super sí la recomiendo, todo es excelente.😊
         </iframe>
       </div>
       <button class="button button-schedule_inperson">Agendar</button>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contacto" class="contact">
+    <div class="contact-box">
+      <h3 class="contact-title">Envíanos un mensaje</h3>
+      <p class="contact-subtitle">¿Tienes alguna duda o consulta? Escríbenos y te responderemos a la brevedad.</p>
+      
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Nombre completo *</label>
+          <input type="text" id="name" name="name" required placeholder="Tu nombre" autocomplete="given-name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" required placeholder="tu@correo.com" autocomplete="email">
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Teléfono</label>
+          <input type="tel" id="phone" name="phone" placeholder="(33) 1234-5678" autocomplete="tel">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Asunto *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Selecciona un asunto</option>
+            <option value="Consulta Nutricional">Consulta Nutricional</option>
+            <option value="Información de Precios">Información de Precios</option>
+            <option value="Seguimiento">Seguimiento de mi tratamiento</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Mensaje *</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+        
+        <button type="submit" class="button button-contact-submit">
+          <span class="button-text">Enviar mensaje</span>
+          <span class="button-loading" style="display: none;">Enviando...</span>
+        </button>
+        
+        <div class="form-message" id="formMessage" style="display: none;"></div>
+      </form>
     </div>
   </section>
 

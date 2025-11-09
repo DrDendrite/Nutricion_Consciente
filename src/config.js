@@ -26,5 +26,16 @@ const CONFIG = {
     inperson: '¡Hola! Me interesa agendar una consulta presencial. ¿Tienen citas disponibles?',
     general: '¡Hola! Me gustaría obtener más información sobre los servicios de nutrición.',
     contact: '¡Hola! Me gustaría ponerme en contacto para obtener más información.'
+  },
+  
+  // Configuración de correo electrónico
+  email: {
+    // Correo destino donde llegarán los mensajes
+    destination: 'pinedanutrifit@gmail.com',
+    // Correo personalizado para mostrar (se usará Web3Forms)
+    from: 'melissa@pinedanutricion.com',
+    // API Key de Web3Forms (necesitas registrarte en https://web3forms.com)
+    // Es GRATIS y solo necesitas tu correo para obtener la API Key
+    web3formsKey: '2c899371-80b5-481d-a398-67a78021ea4e' // Reemplazar con tu API Key de Web3Forms
   }
 };

@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Animación de aparición para los bloques principales
-  const sections = document.querySelectorAll('.start, .about, .icons, .program, .appointment, .inperson, .footer');
+  const sections = document.querySelectorAll('.start, .about, .icons, .program, .appointment, .inperson, .contact, .footer');
   sections.forEach(section => {
     section.style.opacity = 0;
     section.style.transition = 'opacity 1s';
@@ -340,6 +340,79 @@ document.addEventListener('DOMContentLoaded', () => {
   const addressElement = document.querySelector('.inperson-address');
   if (addressElement && CONFIG.location.address) {
     addressElement.textContent = CONFIG.location.address;
+  }
+
+  // ========== CONTACT FORM FUNCTIONALITY ==========
+  const contactForm = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Get form data
+      const formData = new FormData(contactForm);
+      const submitButton = contactForm.querySelector('.button-contact-submit');
+      
+      // Disable button and show loading state
+      submitButton.disabled = true;
+      submitButton.classList.add('loading');
+      formMessage.style.display = 'none';
+
+      // Prepare data for Web3Forms
+      const data = {
+        access_key: CONFIG.email.web3formsKey,
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone') || 'No proporcionado',
+        subject: formData.get('subject'),
+        message: formData.get('message'),
+        from_name: 'Formulario Web - Nutrición Consciente',
+        replyto: formData.get('email')
+      };
+
+      try {
+        // Send to Web3Forms API
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          // Success message
+          formMessage.textContent = '¡Mensaje enviado exitosamente! Te responderemos pronto.';
+          formMessage.className = 'form-message success';
+          formMessage.style.display = 'block';
+          
+          // Reset form
+          contactForm.reset();
+          
+          // Hide message after 5 seconds
+          setTimeout(() => {
+            formMessage.style.display = 'none';
+          }, 5000);
+        } else {
+          throw new Error('Error al enviar el formulario');
+        }
+      } catch (error) {
+        // Error message
+        formMessage.textContent = 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o contáctanos por WhatsApp.';
+        formMessage.className = 'form-message error';
+        formMessage.style.display = 'block';
+        
+        console.error('Form submission error:', error);
+      } finally {
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.classList.remove('loading');
+      }
+    });
   }
 
   // Testimonials Slider Functionality

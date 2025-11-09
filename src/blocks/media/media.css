@@ -378,7 +378,7 @@
   }
 
   .start-title_text {
-    font-size: 20px;
+    font-size: 15px !important;
     margin-top: 30px;
   }
 
@@ -909,7 +909,7 @@
     margin-top: 20px;
   }
   .start-title_text {
-    font-size: 25px;
+    font-size: 10px;
     margin-top: 30px;
   }
   /* About Section */
@@ -1382,7 +1382,6 @@
   /* Hero Section */
   .start {
     width: 100%;
-    background-image: url(/src/images/Post\ 7.JPG);
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -1432,7 +1431,7 @@
     margin-top: 20px;
   }
   .start-title_text {
-    font-size: 22px !important;
+    font-size: 20px !important;
     margin-top: 0px;
   }
 
