@@ -1891,7 +1891,6 @@
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-    background-image: url(/src/images/Post\ 7.JPG);
   }
   .start-container {
     width: 100%;
@@ -2880,8 +2879,8 @@
     align-items: center;
   }
   .start-image_logo {
-    width: 450px;
-    height: 340px;
+    width: 350px;
+    height: 350px;
   }
   .start-image_cover {
     position: absolute;

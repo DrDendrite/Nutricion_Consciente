@@ -69,15 +69,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Animación de aparición para los bloques principales
-  const sections = document.querySelectorAll('.start, .about, .icons, .program, .appointment, .inperson, .contact, .footer');
-  sections.forEach(section => {
-    section.style.opacity = 0;
-    section.style.transition = 'opacity 1s';
-    setTimeout(() => {
-      section.style.opacity = 1;
-    }, 400);
-  });
+  // ========== ANIMACIONES DE SCROLL ==========
+  // Configurar Intersection Observer para animaciones de scroll
+  const scrollObserverOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, scrollObserverOptions);
+  
+  // Aplicar clases de animación a secciones
+  const aboutSection = document.querySelector('.about');
+  const iconsSection = document.querySelector('.icons');
+  const programSection = document.querySelector('.program');
+  const appointmentSection = document.querySelector('.appointment');
+  const inpersonSection = document.querySelector('.inperson');
+  const contactSection = document.querySelector('.contact');
+  
+  if (aboutSection) {
+    aboutSection.classList.add('scroll-slide-up');
+    scrollObserver.observe(aboutSection);
+  }
+  
+  if (iconsSection) {
+    iconsSection.classList.add('scroll-fade');
+    scrollObserver.observe(iconsSection);
+  }
+  
+  if (programSection) {
+    programSection.classList.add('scroll-slide-left');
+    scrollObserver.observe(programSection);
+  }
+  
+  if (appointmentSection) {
+    appointmentSection.classList.add('scroll-scale');
+    scrollObserver.observe(appointmentSection);
+  }
+  
+  if (inpersonSection) {
+    inpersonSection.classList.add('scroll-slide-right');
+    scrollObserver.observe(inpersonSection);
+  }
+  
+  if (contactSection) {
+    contactSection.classList.add('scroll-slide-up');
+    scrollObserver.observe(contactSection);
+  }
 
   // Efecto hover en botones (excepto el hamburguesa)
   const buttons = document.querySelectorAll('button:not(.nav-hamburger)');
